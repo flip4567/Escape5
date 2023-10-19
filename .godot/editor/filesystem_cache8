@@ -1,3 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697747158
+::res://::1697747787
 icon.svg::CompressedTexture2D::280057812453260342::1697746745::1697746755::1::::<><>::
+::res://3D models/::1697747801
+hammer.glb::PackedScene::7128526621309205935::1697747798::1697747801::1::::<><>::uid://p5dsu7a81qmd::::res://3D models/hammer_bake1024_color.png<>uid://c2sxnyestodrf::::res://3D models/hammer_bake1024_orm.png<>uid://cwpxvibsvoc7x::::res://3D models/hammer_bake1024_normal.png
+hammer_bake1024_normal.png::CompressedTexture2D::6349396008817502623::1697747799::1697747801::1::::<><>::
+hammer_bake1024_orm.png::CompressedTexture2D::6706519918923948211::1697747799::1697747801::1::::<><>::
+hammer_bake1024_color.png::CompressedTexture2D::1114979382406750651::1697747800::1697747801::1::::<><>::
