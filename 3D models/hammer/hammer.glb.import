@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c8td16rjt337p"
-path="res://.godot/imported/hammer.glb-618076f25f3eb5424fa932feacfb4280.scn"
+path="res://.godot/imported/hammer.glb-d2459643ebdb35ceb625720ca8aea497.scn"
 
 [deps]
 
-source_file="res://3D models/hammer.glb"
-dest_files=["res://.godot/imported/hammer.glb-618076f25f3eb5424fa932feacfb4280.scn"]
+source_file="res://3D models/hammer/hammer.glb"
+dest_files=["res://.godot/imported/hammer.glb-d2459643ebdb35ceb625720ca8aea497.scn"]
 
 [params]
 

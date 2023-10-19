@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2sxnyestodrf"
-path.s3tc="res://.godot/imported/hammer_bake1024_orm.png-93569eaeec36c4cdbeeca37ba10ff847.s3tc.ctex"
+path.s3tc="res://.godot/imported/hammer_bake1024_orm.png-d5c367ab831c43c580d1528c15e54a0d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://3D models/hammer_bake1024_orm.png"
-dest_files=["res://.godot/imported/hammer_bake1024_orm.png-93569eaeec36c4cdbeeca37ba10ff847.s3tc.ctex"]
+source_file="res://3D models/hammer/hammer_bake1024_orm.png"
+dest_files=["res://.godot/imported/hammer_bake1024_orm.png-d5c367ab831c43c580d1528c15e54a0d.s3tc.ctex"]
 
 [params]
 
