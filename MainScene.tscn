@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bl6cyvuysewfo"]
+[gd_scene load_steps=5 format=3 uid="uid://bl6cyvuysewfo"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_8etef"]
 [ext_resource type="PackedScene" uid="uid://b0aavylmm8lkm" path="res://3D models/MainRoom/room_prototype.tscn" id="2_ca1er"]
+[ext_resource type="PackedScene" uid="uid://b7e2qyits6cm7" path="res://3D models/keypad/Keypa.tscn" id="3_grcd0"]
+[ext_resource type="PackedScene" uid="uid://bsys3d3ay5d5b" path="res://3D models/key/key.tscn" id="4_181if"]
 
 [node name="MainScene" type="Node3D"]
 
@@ -14,5 +16,11 @@ transform = Transform3D(0.754925, -0.38015, -0.534391, 0.542947, 0.819323, 0.184
 [node name="RoomPrototype" parent="." instance=ExtResource("2_ca1er")]
 transform = Transform3D(2.91023, 0, 0, 0, 5.51111, 0, 0, 0, 2.88643, 4, 0, 1)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(38.403, 0, 0, 0, 0.0710757, 0, 0, 0, 48.2148, 5.46522, 5.13554, -1.00249)
+[node name="Roof" type="CSGBox3D" parent="RoomPrototype"]
+transform = Transform3D(13.1959, 0, 0, 0, 0.0128968, 0, 0, 0, 16.704, 0.503474, 0.931853, -0.693761)
+
+[node name="Keypad" parent="." instance=ExtResource("3_grcd0")]
+transform = Transform3D(0.350038, 0, 0, 0, 0.323246, 0, 0, 0, 0.206972, 7.6105, 1.29003, 6.73341)
+
+[node name="key" parent="." instance=ExtResource("4_181if")]
+transform = Transform3D(0.00068463, 0, 0, 0, 0.000986229, 0, 0, 0, 0.000531494, 6, 0, -3)

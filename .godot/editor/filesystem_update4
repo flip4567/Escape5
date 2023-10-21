@@ -2,3 +2,5 @@ res://assets/simple_fpsplayer/Player.gd
 res://3D models/MainRoom/room_prototype.tscn
 res://MainScene.tscn
 res://assets/simple_fpsplayer/Player.tscn
+res://3D models/keypad/Keypa.tscn
+res://3D models/key/key.tscn

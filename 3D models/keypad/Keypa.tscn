@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7e2qyits6cm7"]
+
+[ext_resource type="PackedScene" uid="uid://b86r4goc5c1a0" path="res://3D models/keypad/scene.gltf" id="1_wfemn"]
+
+[node name="scene" instance=ExtResource("1_wfemn")]
