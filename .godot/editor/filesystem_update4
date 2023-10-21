@@ -4,3 +4,5 @@ res://MainScene.tscn
 res://assets/simple_fpsplayer/Player.tscn
 res://3D models/keypad/Keypa.tscn
 res://3D models/key/key.tscn
+res://inventory.gd
+res://3D models/key/inventory.tscn
