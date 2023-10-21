@@ -1,9 +1,16 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697747787
-icon.svg::CompressedTexture2D::280057812453260342::1697746745::1697746755::1::::<><>::
-::res://3D models/::1697747928
-::res://3D models/hammer/::1697747928
-hammer.glb::PackedScene::7128526621309205935::1697747798::1697747987::1::::<><>::uid://p5dsu7a81qmd::::res://3D models/hammer/hammer_bake1024_color.png<>uid://c2sxnyestodrf::::res://3D models/hammer/hammer_bake1024_orm.png<>uid://cwpxvibsvoc7x::::res://3D models/hammer/hammer_bake1024_normal.png
-hammer_bake1024_color.png::CompressedTexture2D::1114979382406750651::1697747800::1697747987::1::::<><>::
-hammer_bake1024_normal.png::CompressedTexture2D::6349396008817502623::1697747799::1697747987::1::::<><>::
-hammer_bake1024_orm.png::CompressedTexture2D::6706519918923948211::1697747799::1697747987::1::::<><>::
+::res://::1697900233
+icon.svg::CompressedTexture2D::280057812453260342::1697748200::1697748200::1::::<><>::
+README.md::TextFile::-1::1697900232::0::1::::<><>::
+simplefps-icon.png::CompressedTexture2D::4655847465857238927::1697900233::1697900234::1::::<><>::
+::res://3D models/::1697748200
+::res://3D models/hammer/::1697748200
+hammer.glb::PackedScene::7128526621309205935::1697748200::1697748200::1::::<><>::
+hammer_bake1024_color.png::CompressedTexture2D::1114979382406750651::1697748200::1697748200::1::::<><>::
+hammer_bake1024_normal.png::CompressedTexture2D::6349396008817502623::1697748200::1697748200::1::::<><>::
+hammer_bake1024_orm.png::CompressedTexture2D::6706519918923948211::1697748200::1697748200::1::::<><>::
+::res://assets/::1697900232
+::res://assets/simple_fpsplayer/::1697900233
+ability_grab.gd::GDScript::-1::1697900233::0::1::::<>RayCast3D<>::
+Player.gd::GDScript::-1::1697900232::0::1::::<>CharacterBody3D<>::
+Player.tscn::PackedScene::7611949078106151781::1697900232::0::1::::<><>::res://assets/simple_fpsplayer/Player.gd<>res://assets/simple_fpsplayer/ability_grab.gd
