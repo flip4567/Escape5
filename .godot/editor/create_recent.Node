@@ -1,8 +1,12 @@
+Control
+CanvasLayer
+GridContainer
+MarginContainer
+PanelContainer
+TextureRect
 CollisionShape2D
 Area2D
 Button
-TextureRect
-GridContainer
 ScrollContainer
 CSGBox3D
 Node3D

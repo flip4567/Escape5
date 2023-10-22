@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://bl6cyvuysewfo"]
+[gd_scene load_steps=8 format=3 uid="uid://bl6cyvuysewfo"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_8etef"]
+[ext_resource type="Script" path="res://MainScene.gd" id="1_b25ig"]
 [ext_resource type="PackedScene" uid="uid://b0aavylmm8lkm" path="res://3D models/MainRoom/room_prototype.tscn" id="2_ca1er"]
 [ext_resource type="PackedScene" uid="uid://b7e2qyits6cm7" path="res://3D models/keypad/Keypa.tscn" id="3_grcd0"]
 [ext_resource type="PackedScene" uid="uid://bsys3d3ay5d5b" path="res://3D models/key/key.tscn" id="4_181if"]
+[ext_resource type="PackedScene" uid="uid://d108xt76uvefx" path="res://inventory/inventory.tscn" id="5_gwghl"]
+[ext_resource type="Script" path="res://inventory/Inventory_Interface.gd" id="6_b0e5n"]
 
 [node name="MainScene" type="Node3D"]
+script = ExtResource("1_b25ig")
 
 [node name="Player" parent="." instance=ExtResource("1_8etef")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75288, 0.848955, -0.655252)
@@ -24,3 +28,23 @@ transform = Transform3D(0.350038, 0, 0, 0, 0.323246, 0, 0, 0, 0.206972, 7.6105, 
 
 [node name="key" parent="." instance=ExtResource("4_181if")]
 transform = Transform3D(0.00068463, 0, 0, 0, 0.000986229, 0, 0, 0, 0.000531494, 6, 0, -3)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="InventroyInterface" type="Control" parent="UI"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_b0e5n")
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerInventory" parent="UI/InventroyInterface" instance=ExtResource("5_gwghl")]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 52.0
+offset_bottom = 50.0

@@ -1,9 +1,14 @@
-res://inventory/inventory.gd
-res://inventory/inventoryButton.tscn
-res://assets/simple_fpsplayer/Player.gd
-res://inventory/item.tres
-res://inventory/InventoryButton.gd
-res://inventory/inventory.tscn
-res://3D models/key/Key.tres
 res://MainScene.tscn
-res://inventory/item.gd
+res://assets/simple_fpsplayer/Player.gd
+res://inventory/item/item_data.gd
+res://3D models/key/Key.tres
+res://3D models/Note/Note1.tres
+res://inventory/TestInv.tres
+res://inventory/slot.tscn
+res://inventory/inventory.tscn
+res://inventory/inventory.gd
+res://assets/simple_fpsplayer/Player.tscn
+res://inventory/slot.gd
+res://inventory/Inventroy_Interface.gd
+res://MainScene.gd
+res://inventory/Inventory_Interface.gd

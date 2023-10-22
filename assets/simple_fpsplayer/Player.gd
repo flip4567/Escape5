@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+@export var inventory_data: InventoryData
+
 const ACCEL = 10
 const DEACCEL = 30
 
@@ -15,6 +17,8 @@ var camera
 var rotation_helper
 var dir = Vector3.ZERO
 var flashlight
+
+signal toggle_inventory()
 
 func _ready():
 	camera = $rotation_helper/Camera3D
@@ -48,6 +52,9 @@ func _input(event):
 				flashlight.hide()
 			elif not event.echo:
 				flashlight.show()
+				
+	if Input.is_action_just_pressed("inventory"):
+		toggle_inventory.emit()
 
 func _physics_process(delta):
 	var moving = false
