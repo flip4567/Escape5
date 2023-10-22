@@ -1,7 +1,7 @@
 CollisionShape2D
 Area2D
-TextureRect
 Button
+TextureRect
 GridContainer
 ScrollContainer
 CSGBox3D
