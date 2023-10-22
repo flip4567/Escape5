@@ -1,17 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697912550
+::res://::1697930705
 icon.svg::CompressedTexture2D::280057812453260342::1697748200::1697748200::1::::<><>::
-MainScene.tscn::PackedScene::3222659102127689168::1697912479::0::1::::<><>::uid://dgpjxoygnvyy4::::res://assets/simple_fpsplayer/Player.tscn<>uid://b0aavylmm8lkm::::res://3D models/MainRoom/room_prototype.tscn<>uid://b7e2qyits6cm7::::res://3D models/keypad/Keypa.tscn
-README.md::TextFile::-1::1697900232::0::1::::<><>::
-simplefps-icon.png::CompressedTexture2D::4655847465857238927::1697900233::1697900234::1::::<><>::
+item.gd::GDScript::-1::1697930290::0::1::::<>Resource<>::
+MainScene.tscn::PackedScene::3222659102127689168::1697930137::0::1::::<><>::uid://dgpjxoygnvyy4::::res://assets/simple_fpsplayer/Player.tscn<>uid://b0aavylmm8lkm::::res://3D models/MainRoom/room_prototype.tscn<>uid://b7e2qyits6cm7::::res://3D models/keypad/Keypa.tscn<>uid://bsys3d3ay5d5b::::res://3D models/key/key.tscn
 ::res://3D models/::1697913894
 ::res://3D models/hammer/::1697748200
 hammer.glb::PackedScene::7128526621309205935::1697748200::1697748200::1::::<><>::
 hammer_bake1024_color.png::CompressedTexture2D::1114979382406750651::1697748200::1697748200::1::::<><>::
 hammer_bake1024_normal.png::CompressedTexture2D::6349396008817502623::1697748200::1697748200::1::::<><>::
 hammer_bake1024_orm.png::CompressedTexture2D::6706519918923948211::1697748200::1697748200::1::::<><>::
-::res://3D models/key/::1697914413
-key.glb::PackedScene::5265177935235315806::1697914382::1697914420::1::::<><>::uid://055rkpuhdp48::::res://3D models/key/key_0.png
+::res://3D models/key/::1697930497
+key.glb::PackedScene::5265177935235315806::1697914382::1697914420::1::::<><>::uid://055rkpuhdp48
+key.tscn::PackedScene::3700508044232081785::1697915087::0::1::::<><>::uid://chaqygks4ek1s::::res://3D models/key/key.glb
 key_0.png::CompressedTexture2D::1818504841175746815::1697914417::1697914421::1::::<><>::
 ::res://3D models/keypad/::1697912420
 Keypa.tscn::PackedScene::4642390396440936376::1697912420::0::1::::<><>::uid://b86r4goc5c1a0::::res://3D models/keypad/scene.gltf
@@ -27,8 +27,16 @@ Panel_normal.png::CompressedTexture2D::96892780294961984::1697908772::1697908839
 ::res://3D models/MainRoom/::1697911056
 RoomPrototype.glb::PackedScene::9127904838559202795::1697908352::1697908551::1::::<><>::
 room_prototype.tscn::PackedScene::4141180554431736724::1697911056::0::1::::<><>::
-::res://assets/::1697900232
-::res://assets/simple_fpsplayer/::1697912420
+::res://assets/::1697925548
+::res://assets/simple_fpsplayer/::1697925553
 ability_grab.gd::GDScript::-1::1697900233::0::1::::<>RayCast3D<>::
 Player.gd::GDScript::-1::1697909201::0::1::::<>CharacterBody3D<>::
-Player.tscn::PackedScene::7611949078106151781::1697912420::0::1::::<><>::res://assets/simple_fpsplayer/Player.gd<>res://assets/simple_fpsplayer/ability_grab.gd
+Player.tscn::PackedScene::7611949078106151781::1697915087::0::1::::<><>::res://assets/simple_fpsplayer/Player.gd<>res://assets/simple_fpsplayer/ability_grab.gd
+README.md::TextFile::-1::1697900232::0::1::::<><>::
+simplefps-icon.png::CompressedTexture2D::4655847465857238927::1697900233::1697925548::1::::<><>::
+::res://inventory/::1697930705
+inventory.gd::GDScript::-1::1697929505::0::1::::<>Control<>::
+inventory.tscn::PackedScene::2287145980518245872::1697930137::0::1::::<><>::res://inventory/inventory.gd
+InventoryButton.gd::GDScript::-1::1697929817::0::1::::<>Button<>::
+inventoryButton.tscn::PackedScene::186324786622081341::1697930137::0::1::::<><>::res://inventory/InventoryButton.gd
+item.tres::AudioStream::4651122432194637095::1697930699::0::1::::<><>::

@@ -1,0 +1,9 @@
+[gd_resource type="AudioStream" load_steps=2 format=3 uid="uid://b7jbko2hiuakt"]
+
+[ext_resource type="Script" path="res://inventory/item.gd" id="1_iow66"]
+
+[resource]
+script = ExtResource("1_iow66")
+ID = 1
+Name = ""
+ResourcePath = ""
