@@ -12,3 +12,7 @@ res://inventory/slot.gd
 res://inventory/Inventroy_Interface.gd
 res://MainScene.gd
 res://inventory/Inventory_Interface.gd
+res://inventory/inventory_data.gd
+res://assets/simple_fpsplayer/ability_grab.gd
+res://3D models/key/key.tscn
+res://3D models/MainRoom/room_prototype.tscn

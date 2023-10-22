@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bl6cyvuysewfo"]
+[gd_scene load_steps=12 format=3 uid="uid://bl6cyvuysewfo"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_8etef"]
 [ext_resource type="Script" path="res://MainScene.gd" id="1_b25ig"]
@@ -7,12 +7,19 @@
 [ext_resource type="PackedScene" uid="uid://bsys3d3ay5d5b" path="res://3D models/key/key.tscn" id="4_181if"]
 [ext_resource type="PackedScene" uid="uid://d108xt76uvefx" path="res://inventory/inventory.tscn" id="5_gwghl"]
 [ext_resource type="Script" path="res://inventory/Inventory_Interface.gd" id="6_b0e5n"]
+[ext_resource type="PackedScene" uid="uid://b7t254g1xu2ab" path="res://inventory/slot.tscn" id="8_qixa7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_85rsg"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_jtyjo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ctqq0"]
 
 [node name="MainScene" type="Node3D"]
 script = ExtResource("1_b25ig")
 
 [node name="Player" parent="." instance=ExtResource("1_8etef")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75288, 0.848955, -0.655252)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.68138, 0.848955, 0.00223708)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.754925, -0.38015, -0.534391, 0.542947, 0.819323, 0.18417, 0.367827, -0.429181, 0.824929, 0, 17.9553, 0)
@@ -27,7 +34,15 @@ transform = Transform3D(13.1959, 0, 0, 0, 0.0128968, 0, 0, 0, 16.704, 0.503474, 
 transform = Transform3D(0.350038, 0, 0, 0, 0.323246, 0, 0, 0, 0.206972, 7.6105, 1.29003, 6.73341)
 
 [node name="key" parent="." instance=ExtResource("4_181if")]
-transform = Transform3D(0.00068463, 0, 0, 0, 0.000986229, 0, 0, 0, 0.000531494, 6, 0, -3)
+transform = Transform3D(0.001, 0, 0, 0, 0.001, 0, 0, 0, 0.001, -0.103415, 1.13787, -0.0853537)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="key"]
+mass = 0.01
+gravity_scale = 0.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="key/RigidBody3D"]
+transform = Transform3D(0.265, 0, 0, 0, 0.265, 0, 0, 0, 0.265, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_85rsg")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -48,3 +63,19 @@ offset_left = 12.0
 offset_top = 10.0
 offset_right = 52.0
 offset_bottom = 50.0
+
+[node name="GrabbedSlot" parent="UI/InventroyInterface" instance=ExtResource("8_qixa7")]
+modulate = Color(1, 1, 1, 0.45098)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.21635, 0.160629, -4.42226)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_jtyjo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_ctqq0")

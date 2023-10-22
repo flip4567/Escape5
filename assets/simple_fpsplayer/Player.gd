@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 @export var inventory_data: InventoryData
 
+
 const ACCEL = 10
 const DEACCEL = 30
 
@@ -17,6 +18,11 @@ var camera
 var rotation_helper
 var dir = Vector3.ZERO
 var flashlight
+var picked_object
+
+
+@onready var interaction = $rotation_helper/Camera3D/interaction
+@onready var hand = $rotation_helper/Camera3D/hand
 
 signal toggle_inventory()
 
@@ -27,6 +33,11 @@ func _ready():
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func pick_object():
+	var collider = hand.get_collider()
+	if collider != null and collider is RigidBody3D:
+		print("colliding")
 
 func _input(event):
 	# This section controls your player camera. Sensitivity can be changed.
@@ -55,6 +66,9 @@ func _input(event):
 				
 	if Input.is_action_just_pressed("inventory"):
 		toggle_inventory.emit()
+	
+	if Input.is_action_just_pressed("pickup"):
+		pick_object()
 
 func _physics_process(delta):
 	var moving = false
