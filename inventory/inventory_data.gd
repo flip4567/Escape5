@@ -29,5 +29,24 @@ func drop_slot_data(grabbed_slot_data: SlotData, index: int) -> SlotData:
 		return slot_data
 	else:
 		return null
+		
+func use_slot_data(index: int):
+	var slot_data = slot_datas[index]
+	
+	if not slot_data:
+		return
+	print(slot_data.item_data.name)
+		
+		
+func pick_up_slot_data(slot_data: SlotData) -> bool:
+	for index in slot_datas.size():
+		if not slot_datas[index]:
+			slot_datas[index] = slot_data
+			inventory_updated.emit(self)
+			return true
+			
+			
+	return false
+		
 func on_slot_clicked(index: int, button: int):
 	inventory_interact.emit(self, index, button)

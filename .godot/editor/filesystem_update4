@@ -1,18 +1,10 @@
 res://MainScene.tscn
 res://assets/simple_fpsplayer/Player.gd
-res://inventory/item/item_data.gd
-res://3D models/key/Key.tres
-res://3D models/Note/Note1.tres
 res://inventory/TestInv.tres
+res://3D models/key/key.tscn
+res://inventory/item/pick_up.tscn
+res://assets/simple_fpsplayer/Player.tscn
 res://inventory/slot.tscn
 res://inventory/inventory.tscn
-res://inventory/inventory.gd
-res://assets/simple_fpsplayer/Player.tscn
-res://inventory/slot.gd
-res://inventory/Inventroy_Interface.gd
-res://MainScene.gd
-res://inventory/Inventory_Interface.gd
-res://inventory/inventory_data.gd
-res://assets/simple_fpsplayer/ability_grab.gd
-res://3D models/key/key.tscn
 res://3D models/MainRoom/room_prototype.tscn
+res://inventory/item/sketchfab_model.tscn

@@ -1,3 +1,4 @@
+ShaderMaterial
 InventoryData
 ItemData
 AtlasTexture
