@@ -30,6 +30,7 @@ func _ready():
 	camera = $rotation_helper/Camera3D
 	rotation_helper = $rotation_helper
 	flashlight = $rotation_helper/Camera3D/flashlight_player
+	PlayerManager.player = self
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

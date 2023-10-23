@@ -8,3 +8,7 @@ res://inventory/slot.tscn
 res://inventory/inventory.tscn
 res://3D models/MainRoom/room_prototype.tscn
 res://inventory/item/sketchfab_model.tscn
+res://inventory/inventory_data.gd
+res://assets/simple_fpsplayer/Player_manager.gd
+res://inventory/item/pick_up_note.tscn
+res://3D models/Note/Note1.tres

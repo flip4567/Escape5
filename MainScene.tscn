@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bl6cyvuysewfo"]
+[gd_scene load_steps=21 format=3 uid="uid://bl6cyvuysewfo"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_8etef"]
 [ext_resource type="Script" path="res://MainScene.gd" id="1_b25ig"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://inventory/slot_data.gd" id="6_lwdl8"]
 [ext_resource type="PackedScene" uid="uid://b7t254g1xu2ab" path="res://inventory/slot.tscn" id="8_qixa7"]
 [ext_resource type="Script" path="res://door.gd" id="11_3v2bi"]
+[ext_resource type="PackedScene" uid="uid://cfdwjqnf3or0h" path="res://inventory/item/pick_up_note.tscn" id="12_grhal"]
 
 [sub_resource type="Resource" id="Resource_i48du"]
 script = ExtResource("6_lwdl8")
@@ -25,6 +26,15 @@ albedo_color = Color(0, 0, 0, 1)
 material = SubResource("StandardMaterial3D_cstqm")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_202fp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wrch6"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bogfs"]
+material = SubResource("StandardMaterial3D_wrch6")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uy8ni"]
+size = Vector3(1, 0.952315, 1)
 
 [node name="MainScene" type="Node3D"]
 script = ExtResource("1_b25ig")
@@ -42,7 +52,7 @@ transform = Transform3D(2.91023, 0, 0, 0, 5.51111, 0, 0, 0, 2.88643, 4, 0, 1)
 transform = Transform3D(13.1959, 0, 0, 0, 0.0128968, 0, 0, 0, 16.704, 0.503474, 0.931853, -0.693761)
 
 [node name="PickUp" parent="." instance=ExtResource("2_43tgc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.743406, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.478459, 0)
 lock_rotation = true
 slot_data = SubResource("Resource_i48du")
 
@@ -100,5 +110,19 @@ collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/RigidBody3D/Area3D"]
 shape = SubResource("BoxShape3D_202fp")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.24396, -0.0904254, -14.3167)
+mesh = SubResource("BoxMesh_bogfs")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.042301, 0)
+shape = SubResource("BoxShape3D_uy8ni")
+
+[node name="PickUpNote" parent="." instance=ExtResource("12_grhal")]
+transform = Transform3D(0.00202461, 0, -0.999998, 0, 1, 0, 0.999998, 0, 0.00202461, 5.27103, 0.414886, -13.9241)
+gravity_scale = 0.0
 
 [connection signal="area_entered" from="MeshInstance3D2/RigidBody3D/Area3D" to="MeshInstance3D2" method="_on_area_3d_area_entered"]
