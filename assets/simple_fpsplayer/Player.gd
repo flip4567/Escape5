@@ -38,7 +38,7 @@ func _ready():
 func pick_object():
 	var collider = hand.get_collider()
 	if collider is RigidBody3D:
-		emit_signal("Pick_Up")
+		print("hi")
 
 func _input(event):
 	# This section controls your player camera. Sensitivity can be changed.
