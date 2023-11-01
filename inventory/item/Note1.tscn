@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://cfdwjqnf3or0h"]
 
-[ext_resource type="Script" path="res://inventory/item/pick_up.gd" id="1_i7kls"]
+[ext_resource type="Script" path="res://3D models/key/pick_up_key1.gd" id="1_805j6"]
 [ext_resource type="Resource" uid="uid://bbc7rnjg575xh" path="res://3D models/Note/Note1.tres" id="2_1r5cv"]
 [ext_resource type="PackedScene" uid="uid://cnnu8vs3x0h5u" path="res://3D models/Note/folded_wrinkled_paper.glb" id="2_7nl4v"]
 [ext_resource type="Script" path="res://inventory/slot_data.gd" id="3_0rc87"]
@@ -15,9 +15,9 @@ size = Vector3(0.426074, 0.0210992, 0.326229)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_5om44"]
 
-[node name="PickUpNote" type="RigidBody3D"]
+[node name="Note1" type="RigidBody3D"]
 contact_monitor = true
-script = ExtResource("1_i7kls")
+script = ExtResource("1_805j6")
 slot_data = SubResource("Resource_q1tka")
 
 [node name="folded_wrinkled_paper" parent="." instance=ExtResource("2_7nl4v")]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://pqxaeubbyd1f"]
 
-[ext_resource type="Script" path="res://inventory/item/pick_up.gd" id="1_ayiti"]
+[ext_resource type="Script" path="res://3D models/key/pick_up_key1.gd" id="1_avqyd"]
 [ext_resource type="PackedScene" uid="uid://cdbxt2sguhyss" path="res://inventory/item/sketchfab_model.tscn" id="1_jbopn"]
 [ext_resource type="Resource" uid="uid://cpxn5cqryvnkt" path="res://3D models/key/Key.tres" id="2_nl5qh"]
 [ext_resource type="Texture2D" uid="uid://055rkpuhdp48" path="res://3D models/key/key_0.png" id="3_6vkfa"]
@@ -15,9 +15,9 @@ radius = 0.204296
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_5om44"]
 
-[node name="PickUp" type="RigidBody3D"]
+[node name="Key1" type="RigidBody3D" groups=["Key"]]
 contact_monitor = true
-script = ExtResource("1_ayiti")
+script = ExtResource("1_avqyd")
 slot_data = SubResource("Resource_dcq15")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

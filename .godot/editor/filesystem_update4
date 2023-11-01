@@ -1,6 +1,8 @@
 res://MainScene.tscn
 res://assets/simple_fpsplayer/Player.gd
 res://inventory/TestInv.tres
+res://inventory/item/pick_up.gd
+res://inventory/item/ItemManager.gd
 res://inventory/item/pick_up_note.tscn
 res://inventory/item/pick_up.tscn
 res://3D models/key/key.tscn
@@ -9,3 +11,7 @@ res://inventory/slot.tscn
 res://inventory/inventory.tscn
 res://3D models/MainRoom/room_prototype.tscn
 res://inventory/item/sketchfab_model.tscn
+res://3D models/key/pick_up_key1.gd
+res://3D models/Note/pick_up_note1.gd
+res://inventory/item/Key1.tscn
+res://inventory/item/Note1.tscn

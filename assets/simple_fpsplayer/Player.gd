@@ -20,11 +20,14 @@ var dir = Vector3.ZERO
 var flashlight
 var picked_object
 
+
+
+
 @onready var interaction = $rotation_helper/Camera3D/interaction
 @onready var hand = $rotation_helper/Camera3D/hand
 
 signal toggle_inventory()
-signal Pick_Up
+
 
 func _ready():
 	camera = $rotation_helper/Camera3D
@@ -37,8 +40,10 @@ func _ready():
 
 func pick_object():
 	var collider = hand.get_collider()
-	if collider is RigidBody3D:
-		emit_signal("Pick_Up")
+	if collider is RigidBody3D and  collider.is_in_group("Key1"):
+		ItemManager.Pick_Up_Key1.emit()
+	elif collider is RigidBody3D and  collider.is_in_group("Note1"):
+		ItemManager.Pick_Up_Note1.emit()
 
 func _input(event):
 	# This section controls your player camera. Sensitivity can be changed.
