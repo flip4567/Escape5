@@ -47,7 +47,6 @@ script = ExtResource("1_b25ig")
 
 [node name="Player" parent="." instance=ExtResource("1_8etef")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.68138, 0.848955, 0.00223708)
-visible = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.754925, -0.38015, -0.534391, 0.542947, 0.819323, 0.18417, 0.367827, -0.429181, 0.824929, 0, 17.9553, 0)

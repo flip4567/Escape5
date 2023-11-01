@@ -14,7 +14,7 @@ const MOUSE_SENSITIVITY = 0.06
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-var camera
+
 var rotation_helper
 var dir = Vector3.ZERO
 var flashlight
@@ -25,6 +25,8 @@ var picked_object
 
 @onready var interaction = $rotation_helper/Camera3D/interaction
 @onready var hand = $rotation_helper/Camera3D/hand
+@onready var camera = $rotation_helper/Camera3D
+
 
 signal toggle_inventory()
 
@@ -34,6 +36,7 @@ func _ready():
 	rotation_helper = $rotation_helper
 	flashlight = $rotation_helper/Camera3D/flashlight_player
 	PlayerManager.player = self
+	PlayerManager.cam = camera
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

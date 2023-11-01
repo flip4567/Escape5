@@ -15,3 +15,5 @@ res://3D models/key/pick_up_key1.gd
 res://3D models/Note/pick_up_note1.gd
 res://inventory/item/Key1.tscn
 res://inventory/item/Note1.tscn
+res://inventory/inventory_data.gd
+res://assets/simple_fpsplayer/Player_manager.gd
