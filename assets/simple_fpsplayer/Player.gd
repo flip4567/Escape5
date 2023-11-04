@@ -47,6 +47,8 @@ func pick_object():
 		ItemManager.Pick_Up_Key1.emit()
 	elif collider is RigidBody3D and  collider.is_in_group("Note1"):
 		ItemManager.Pick_Up_Note1.emit()
+	elif collider is RigidBody3D and collider.is_in_group("Marker"):
+		ItemManager.Pick_Up_Marker.emit()
 
 func _input(event):
 	# This section controls your player camera. Sensitivity can be changed.

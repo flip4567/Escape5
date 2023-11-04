@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=3 uid="uid://bl6cyvuysewfo"]
+[gd_scene load_steps=25 format=3 uid="uid://bl6cyvuysewfo"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_8etef"]
 [ext_resource type="Script" path="res://MainScene.gd" id="1_b25ig"]
 [ext_resource type="PackedScene" uid="uid://pqxaeubbyd1f" path="res://inventory/item/Key1.tscn" id="2_43tgc"]
 [ext_resource type="PackedScene" uid="uid://b0aavylmm8lkm" path="res://3D models/MainRoom/room_prototype.tscn" id="2_ca1er"]
 [ext_resource type="PackedScene" uid="uid://b7e2qyits6cm7" path="res://3D models/keypad/Keypa.tscn" id="3_grcd0"]
+[ext_resource type="PackedScene" uid="uid://c220l0xmp61r4" path="res://3D models/Marker/marker_pickup.tscn" id="3_lbqsw"]
 [ext_resource type="Resource" uid="uid://cpxn5cqryvnkt" path="res://3D models/key/Key.tres" id="5_5o2br"]
 [ext_resource type="PackedScene" uid="uid://d108xt76uvefx" path="res://inventory/inventory.tscn" id="5_gwghl"]
 [ext_resource type="Script" path="res://inventory/Inventory_Interface.gd" id="6_b0e5n"]
@@ -132,5 +133,8 @@ slot_data = SubResource("Resource_rt0hr")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Note1"]
 transform = Transform3D(0.00202461, 0, 0.999998, 0, 1, 0, -0.999998, 0, 0.00202461, -0.392654, -0.46301, 0.0262761)
 shape = SubResource("BoxShape3D_uy8ni")
+
+[node name="marker_pickup" parent="." groups=["Marker"] instance=ExtResource("3_lbqsw")]
+transform = Transform3D(0.245, 0, 0, 0, 0.245, 0, 0, 0, 0.245, 4.29131, 1.88338, -4.69453)
 
 [connection signal="area_entered" from="MeshInstance3D2/RigidBody3D/Area3D" to="MeshInstance3D2" method="_on_area_3d_area_entered"]
