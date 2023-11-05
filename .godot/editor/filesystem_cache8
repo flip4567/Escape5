@@ -1,84 +1,84 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1699113650
-door.gd::GDScript::-1::1698784563::0::1::::<>MeshInstance3D<>::
-icon.svg::CompressedTexture2D::280057812453260342::1698784563::1698784563::1::::<><>::
-MainScene.gd::GDScript::-1::1698784563::0::1::::<>Node3D<>::
-MainScene.tscn::PackedScene::3222659102127689168::1699113650::0::1::::<><>::uid://dgpjxoygnvyy4::::res://assets/simple_fpsplayer/Player.tscn<>res://MainScene.gd<>uid://pqxaeubbyd1f::::res://inventory/item/Key1.tscn<>uid://b0aavylmm8lkm::::res://3D models/MainRoom/room_prototype.tscn<>uid://b7e2qyits6cm7::::res://3D models/keypad/Keypa.tscn<>uid://c220l0xmp61r4::::res://3D models/Marker/marker_pickup.tscn<>uid://cpxn5cqryvnkt::::res://3D models/key/Key.tres<>uid://d108xt76uvefx::::res://inventory/inventory.tscn<>res://inventory/Inventory_Interface.gd<>res://inventory/slot_data.gd<>uid://b7t254g1xu2ab::::res://inventory/slot.tscn<>res://door.gd<>uid://cfdwjqnf3or0h::::res://inventory/item/Note1.tscn<>res://3D models/Note/pick_up_note1.gd<>uid://bbc7rnjg575xh::::res://3D models/Note/Note1.tres<>res://3D models/Marker/pick_up_marker.gd
-::res://3D models/::1699110101
-::res://3D models/hammer/::1698784563
-hammer.glb::PackedScene::7128526621309205935::1698784563::1698784563::1::::<><>::
-hammer_bake1024_color.png::CompressedTexture2D::1114979382406750651::1698784563::1698784563::1::::<><>::
-hammer_bake1024_normal.png::CompressedTexture2D::6349396008817502623::1698784563::1698784563::1::::<><>::
-hammer_bake1024_orm.png::CompressedTexture2D::6706519918923948211::1698784563::1698784563::1::::<><>::
-::res://3D models/key/::1699113650
-key.gd::GDScript::-1::1698784563::0::1::::<>Node3D<>::
-key.glb::PackedScene::5265177935235315806::1698784563::1698784563::1::::<><>::
-Key.tres::Resource/Resource::5873997735592059619::1698784563::0::1::::<><>::res://inventory/item/item_data.gd<>uid://055rkpuhdp48
-key.tscn::PackedScene::3700508044232081785::1699113650::0::1::::<><>::uid://cdbxt2sguhyss::::res://inventory/item/sketchfab_model.tscn<>res://3D models/key/key.gd
-key_0.png::CompressedTexture2D::1818504841175746815::1698784563::1698784563::1::::<><>::
-pick_up_key1.gd::GDScript::-1::1698849704::0::1::::<>RigidBody3D<>::
-::res://3D models/keypad/::1698784563
-Keypa.tscn::PackedScene::4642390396440936376::1698784563::0::1::::<><>::uid://b86r4goc5c1a0
-scene.gltf::PackedScene::4767732547922726961::1698784563::1698784563::1::::<><>::
-::res://3D models/keypad/textures/::1698784563
-Button_baseColor.jpeg::CompressedTexture2D::3939901139132052361::1698784563::1698784563::1::::<><>::
-Button_metallicRoughness.png::CompressedTexture2D::4483492963806666457::1698784563::1698784563::1::::<><>::
-Button_normal.png::CompressedTexture2D::4155862187626465191::1698784563::1698784563::1::::<><>::
-Panel_baseColor.jpeg::CompressedTexture2D::7152086503126488614::1698784563::1698784563::1::::<><>::
-Panel_emissive.jpeg::CompressedTexture2D::8869045394152067803::1698784563::1698784563::1::::<><>::
-Panel_metallicRoughness.png::CompressedTexture2D::3942878596484309271::1698784563::1698784563::1::::<><>::
-Panel_normal.png::CompressedTexture2D::96892780294961984::1698784563::1698784563::1::::<><>::
-::res://3D models/MainRoom/::1698861247
-RoomPrototype.glb::PackedScene::9127904838559202795::1698784563::1698784563::1::::<><>::
-room_prototype.tscn::PackedScene::4141180554431736724::1698861247::0::1::::<><>::
-::res://3D models/Marker/::1699113650
-BlueMarker.jpg::CompressedTexture2D::7676237034460101514::1699110968::1699113711::1::::<><>::
-marker.glb::PackedScene::6131704997364244503::1699110034::1699110148::1::::<><>::uid://cewebsbe5rqrj
-Marker.tres::Resource/ItemData::8048385632586062073::1699111950::0::1::::<><>::res://inventory/item/item_data.gd<>uid://dhmorc3dy37y1::::res://3D models/Marker/BlueMarker.jpg
-marker_0.png::CompressedTexture2D::5099258653480243507::1699110034::1699110040::1::::<><>::
-marker_1.png::CompressedTexture2D::1819958111129982557::1699110035::1699110040::1::::<><>::
-marker_2.png::CompressedTexture2D::7131040403921267836::1699110035::1699110040::1::::<><>::
-marker_pickup.tscn::PackedScene::6725217262705580271::1699113650::0::1::::<><>::uid://cewebsbe5rqrj::::res://3D models/Marker/marker_0.png<>uid://06updqqtdsgb::::res://3D models/Marker/marker_1.png<>uid://c8ulgt2bmcqpo::::res://3D models/Marker/marker_2.png
-pick_up_marker.gd::GDScript::-1::1699112269::0::1::::<>RigidBody3D<>::
-Marker_Equip.tscn::PackedScene::7462518816299550265::1699113650::0::1::::<><>::uid://ctmijx8pqxp1p::::res://3D models/Marker/marker.glb
-::res://3D models/Note/::1699109770
-folded_wrinkled_paper.glb::PackedScene::5713407648638342884::1698784563::1698784563::1::::<><>::
-folded_wrinkled_paper_0.png::CompressedTexture2D::5498497158385185192::1698784563::1698784563::1::::<><>::
-folded_wrinkled_paper_1.png::CompressedTexture2D::8412674225852447590::1698784563::1698784563::1::::<><>::
-folded_wrinkled_paper_2.png::CompressedTexture2D::593694684597422069::1698784563::1698784563::1::::<><>::
-Note1.png::CompressedTexture2D::5735493411328040932::1698784563::1698784563::1::::<><>::
-Note1.tres::Resource/Resource::2462712282124950509::1698784563::0::1::::<><>::res://inventory/item/item_data.gd<>uid://cnyk0dyy4dpq7
-pick_up_note1.gd::GDScript::-1::1698849704::0::1::::<>RigidBody3D<>::
-::res://3D models/Note/Marker/::1699108168
-::res://assets/::1699111021
-pngimg.com - dot_PNG40.png::CompressedTexture2D::8602219238233654642::1698784563::1698784563::1::::<><>::
-::res://assets/simple_fpsplayer/::1699113604
-Player.gd::GDScript::-1::1699112635::0::1::::<>CharacterBody3D<>::
-Player.tscn::PackedScene::7611949078106151781::1699112742::0::1::::<><>::res://assets/simple_fpsplayer/Player.gd<>uid://leiq60yociyf::::res://inventory/TestInv.tres<>uid://dus8j86qu0tvu::::res://assets/pngimg.com - dot_PNG40.png<>uid://c220l0xmp61r4::::res://3D models/Marker/marker_pickup.tscn
-Player_manager.gd::GDScript::-1::1699113604::0::1::::<>Node<>::
-README.md::TextFile::-1::1698784563::0::1::::<><>::
-simplefps-icon.png::CompressedTexture2D::4655847465857238927::1698784563::1698784563::1::::<><>::
-::res://inventory/::1699113650
-inventory.gd::GDScript::-1::1698784563::0::1::::<>PanelContainer<>::
-inventory.tscn::PackedScene::9037827212354194585::1699113650::0::1::::<><>::res://inventory/inventory.gd
-inventory_data.gd::GDScript::-1::1698853354::0::1::::InventoryData<>Resource<>::
-Inventory_Interface.gd::GDScript::-1::1698784563::0::1::::<>Control<>::
-pick_up.gd::GDScript::-1::1698784563::0::1::::<>Node2D<>::
-slot.gd::GDScript::-1::1698784563::0::1::::<>PanelContainer<>::
-slot.tscn::PackedScene::4673381323717969213::1698861247::0::1::::<><>::res://inventory/slot.gd
-slot_data.gd::GDScript::-1::1698784563::0::1::::SlotData<>Resource<>::
-TestInv.tres::Resource/InventoryData::780850767632417797::1699112917::0::1::::<><>::res://inventory/inventory_data.gd
-::res://inventory/item/::1699113650
-ItemManager.gd::GDScript::-1::1699112635::0::1::::<>Node<>::
-item_data.gd::GDScript::-1::1698784563::0::1::::ItemData<>Resource<>::
-Key1.tscn::PackedScene::1087259430506279157::1699113650::0::1::::<><>::res://3D models/key/pick_up_key1.gd<>uid://cdbxt2sguhyss::::res://inventory/item/sketchfab_model.tscn<>uid://cpxn5cqryvnkt::::res://3D models/key/Key.tres<>uid://055rkpuhdp48::::res://3D models/key/key_0.png<>res://inventory/slot_data.gd
-Marker.tscn::PackedScene::4205692123521849018::1699107199::0::1::::<><>::res://3D models/key/pick_up_key1.gd
-Note1.tscn::PackedScene::5131331425545774637::1699113650::0::1::::<><>::res://3D models/key/pick_up_key1.gd<>uid://bbc7rnjg575xh::::res://3D models/Note/Note1.tres<>uid://cnnu8vs3x0h5u::::res://3D models/Note/folded_wrinkled_paper.glb<>res://inventory/slot_data.gd<>uid://cnyk0dyy4dpq7::::res://3D models/Note/Note1.png
-pick_up.tscn::PackedScene::8117613346450340542::1698868215::0::1::::<><>::res://inventory/item/pick_up.gd<>uid://cdbxt2sguhyss
-pick_up_note.tscn::PackedScene::5630158636838955504::1698868215::0::1::::<><>::res://inventory/item/pick_up.gd<>uid://bbc7rnjg575xh
-sketchfab_model.tscn::PackedScene::4986904143208756878::1699113649::0::1::::<><>::uid://055rkpuhdp48::::res://3D models/key/key_0.png
-::res://TicTacToe/::1699113650
-TTT.gd::GDScript::-1::1698868215::0::1::::<>Node3D<>::
-TTTTest.tscn::PackedScene::1419473905434618819::1699113650::0::1::::<><>::uid://dgpjxoygnvyy4::::res://assets/simple_fpsplayer/Player.tscn<>res://TicTacToe/TTT.gd<>uid://bnv82oo1mqpgb::::res://TicTacToe/TTT_Button.tscn<>res://inventory/Inventory_Interface.gd<>uid://d108xt76uvefx::::res://inventory/inventory.tscn<>uid://b7t254g1xu2ab::::res://inventory/slot.tscn<>uid://c220l0xmp61r4::::res://3D models/Marker/marker_pickup.tscn<>res://3D models/Marker/pick_up_marker.gd<>uid://dmwx0ahq4lrvd::::res://3D models/Marker/Marker.tres<>res://inventory/slot_data.gd
-TTT_Button.gd::GDScript::-1::1699110090::0::1::::<>Node3D<>::
-TTT_Button.tscn::PackedScene::3344280219171670153::1699113650::0::1::::<><>::res://TicTacToe/TTT_Button.gd
+::res://::1699214760
+door.gd::GDScript::-1::1698780963::0::1::::<>MeshInstance3D<>::
+icon.svg::CompressedTexture2D::280057812453260342::1698780963::1698780963::1::::<><>::
+MainScene.gd::GDScript::-1::1698780963::0::1::::<>Node3D<>::
+MainScene.tscn::PackedScene::3222659102127689168::1699114714::0::1::::<><>::uid://dgpjxoygnvyy4::::res://assets/simple_fpsplayer/Player.tscn<>res://MainScene.gd<>uid://pqxaeubbyd1f::::res://inventory/item/Key1.tscn<>uid://b0aavylmm8lkm::::res://3D models/MainRoom/room_prototype.tscn<>uid://b7e2qyits6cm7::::res://3D models/keypad/Keypa.tscn<>uid://c220l0xmp61r4::::res://3D models/Marker/marker_pickup.tscn<>uid://cpxn5cqryvnkt::::res://3D models/key/Key.tres<>uid://d108xt76uvefx::::res://inventory/inventory.tscn<>res://inventory/Inventory_Interface.gd<>res://inventory/slot_data.gd<>uid://b7t254g1xu2ab::::res://inventory/slot.tscn<>res://door.gd<>uid://cfdwjqnf3or0h::::res://inventory/item/Note1.tscn<>res://3D models/Note/pick_up_note1.gd<>uid://bbc7rnjg575xh::::res://3D models/Note/Note1.tres
+::res://3D models/::1699106501
+::res://3D models/hammer/::1698780963
+hammer.glb::PackedScene::7128526621309205935::1698780963::1698780963::1::::<><>::
+hammer_bake1024_color.png::CompressedTexture2D::1114979382406750651::1698780963::1698780963::1::::<><>::
+hammer_bake1024_normal.png::CompressedTexture2D::6349396008817502623::1698780963::1698780963::1::::<><>::
+hammer_bake1024_orm.png::CompressedTexture2D::6706519918923948211::1698780963::1698780963::1::::<><>::
+::res://3D models/key/::1699114695
+key.gd::GDScript::-1::1698780963::0::1::::<>Node3D<>::
+key.glb::PackedScene::5265177935235315806::1698780963::1698780963::1::::<><>::
+Key.tres::Resource/ItemData::5873997735592059619::1698780963::0::1::::<><>::res://inventory/item/item_data.gd<>uid://055rkpuhdp48::::res://3D models/key/key_0.png
+key.tscn::PackedScene::3700508044232081785::1699114695::0::1::::<><>::uid://cdbxt2sguhyss::::res://inventory/item/sketchfab_model.tscn<>res://3D models/key/key.gd
+key_0.png::CompressedTexture2D::1818504841175746815::1698780963::1698780963::1::::<><>::
+pick_up_key1.gd::GDScript::-1::1698846104::0::1::::<>RigidBody3D<>::
+::res://3D models/keypad/::1698780963
+Keypa.tscn::PackedScene::4642390396440936376::1698780963::0::1::::<><>::uid://b86r4goc5c1a0::::res://3D models/keypad/scene.gltf
+scene.gltf::PackedScene::4767732547922726961::1698780963::1698780963::1::::<><>::
+::res://3D models/keypad/textures/::1698780963
+Button_baseColor.jpeg::CompressedTexture2D::3939901139132052361::1698780963::1698780963::1::::<><>::
+Button_metallicRoughness.png::CompressedTexture2D::4483492963806666457::1698780963::1698780963::1::::<><>::
+Button_normal.png::CompressedTexture2D::4155862187626465191::1698780963::1698780963::1::::<><>::
+Panel_baseColor.jpeg::CompressedTexture2D::7152086503126488614::1698780963::1698780963::1::::<><>::
+Panel_emissive.jpeg::CompressedTexture2D::8869045394152067803::1698780963::1698780963::1::::<><>::
+Panel_metallicRoughness.png::CompressedTexture2D::3942878596484309271::1698780963::1698780963::1::::<><>::
+Panel_normal.png::CompressedTexture2D::96892780294961984::1698780963::1698780963::1::::<><>::
+::res://3D models/MainRoom/::1698857647
+RoomPrototype.glb::PackedScene::9127904838559202795::1698780963::1698780963::1::::<><>::
+room_prototype.tscn::PackedScene::4141180554431736724::1698857647::0::1::::<><>::
+::res://3D models/Marker/::1699114695
+BlueMarker.jpg::CompressedTexture2D::7676237034460101514::1699107368::1699110111::1::::<><>::
+marker.glb::PackedScene::6131704997364244503::1699106434::1699106548::1::::<><>::
+Marker.tres::Resource/ItemData::8048385632586062073::1699114652::0::1::::<><>::res://inventory/item/item_data.gd<>uid://dhmorc3dy37y1::::res://3D models/Marker/BlueMarker.jpg
+marker_0.png::CompressedTexture2D::5099258653480243507::1699106434::1699106440::1::::<><>::
+marker_1.png::CompressedTexture2D::1819958111129982557::1699106435::1699106440::1::::<><>::
+marker_2.png::CompressedTexture2D::7131040403921267836::1699106435::1699106440::1::::<><>::
+Marker_Equip.tscn::PackedScene::7462518816299550265::1699114695::0::1::::<><>::uid://ctmijx8pqxp1p::::res://3D models/Marker/marker.glb
+marker_pickup.tscn::PackedScene::6725217262705580271::1699114693::0::1::::<><>::res://3D models/Marker/pick_up_marker.gd<>uid://cewebsbe5rqrj::::res://3D models/Marker/marker_0.png<>uid://dmwx0ahq4lrvd::::res://3D models/Marker/Marker.tres<>uid://06updqqtdsgb::::res://3D models/Marker/marker_1.png<>uid://c8ulgt2bmcqpo::::res://3D models/Marker/marker_2.png<>res://inventory/slot_data.gd<>uid://dhmorc3dy37y1::::res://3D models/Marker/BlueMarker.jpg
+pick_up_marker.gd::GDScript::-1::1699108669::0::1::::<>RigidBody3D<>::
+::res://3D models/Note/::1699106170
+folded_wrinkled_paper.glb::PackedScene::5713407648638342884::1698780963::1698780963::1::::<><>::
+folded_wrinkled_paper_0.png::CompressedTexture2D::5498497158385185192::1698780963::1698780963::1::::<><>::
+folded_wrinkled_paper_1.png::CompressedTexture2D::8412674225852447590::1698780963::1698780963::1::::<><>::
+folded_wrinkled_paper_2.png::CompressedTexture2D::593694684597422069::1698780963::1698780963::1::::<><>::
+Note1.png::CompressedTexture2D::5735493411328040932::1698780963::1698780963::1::::<><>::
+Note1.tres::Resource/ItemData::2462712282124950509::1698780963::0::1::::<><>::res://inventory/item/item_data.gd<>uid://cnyk0dyy4dpq7::::res://3D models/Note/Note1.png
+pick_up_note1.gd::GDScript::-1::1698846104::0::1::::<>RigidBody3D<>::
+::res://3D models/Note/Marker/::1699104568
+::res://assets/::1699107421
+pngimg.com - dot_PNG40.png::CompressedTexture2D::8602219238233654642::1698780963::1698780963::1::::<><>::
+::res://assets/simple_fpsplayer/::1699114695
+Player.gd::GDScript::-1::1699110602::0::1::::<>CharacterBody3D<>::
+Player.tscn::PackedScene::7611949078106151781::1699114695::0::1::::<><>::res://assets/simple_fpsplayer/Player.gd<>uid://leiq60yociyf::::res://inventory/TestInv.tres<>uid://dus8j86qu0tvu::::res://assets/pngimg.com - dot_PNG40.png
+Player_manager.gd::GDScript::-1::1699113026::0::1::::<>Node<>::
+README.md::TextFile::-1::1698780963::0::1::::<><>::
+simplefps-icon.png::CompressedTexture2D::4655847465857238927::1698780963::1698780963::1::::<><>::
+::res://inventory/::1699114695
+inventory.gd::GDScript::-1::1698780963::0::1::::<>PanelContainer<>::
+inventory.tscn::PackedScene::9037827212354194585::1699114695::0::1::::<><>::res://inventory/inventory.gd
+inventory_data.gd::GDScript::-1::1698849754::0::1::::InventoryData<>Resource<>::
+Inventory_Interface.gd::GDScript::-1::1698780963::0::1::::<>Control<>::
+pick_up.gd::GDScript::-1::1698780963::0::1::::<>Node2D<>::
+slot.gd::GDScript::-1::1698780963::0::1::::<>PanelContainer<>::
+slot.tscn::PackedScene::4673381323717969213::1698857647::0::1::::<><>::res://inventory/slot.gd
+slot_data.gd::GDScript::-1::1698780963::0::1::::SlotData<>Resource<>::
+TestInv.tres::Resource/InventoryData::780850767632417797::1699109317::0::1::::<><>::res://inventory/inventory_data.gd
+::res://inventory/item/::1699114695
+ItemManager.gd::GDScript::-1::1699110425::0::1::::<>Node<>::
+item_data.gd::GDScript::-1::1698780963::0::1::::ItemData<>Resource<>::
+Key1.tscn::PackedScene::1087259430506279157::1699114695::0::1::::<><>::res://3D models/key/pick_up_key1.gd<>uid://cdbxt2sguhyss::::res://inventory/item/sketchfab_model.tscn<>uid://cpxn5cqryvnkt::::res://3D models/key/Key.tres<>uid://055rkpuhdp48::::res://3D models/key/key_0.png<>res://inventory/slot_data.gd
+Marker.tscn::PackedScene::4205692123521849018::1699103599::0::1::::<><>::res://3D models/key/pick_up_key1.gd
+Note1.tscn::PackedScene::5131331425545774637::1699114695::0::1::::<><>::res://3D models/key/pick_up_key1.gd<>uid://bbc7rnjg575xh::::res://3D models/Note/Note1.tres<>uid://cnnu8vs3x0h5u::::res://3D models/Note/folded_wrinkled_paper.glb<>res://inventory/slot_data.gd<>uid://cnyk0dyy4dpq7::::res://3D models/Note/Note1.png
+pick_up.tscn::PackedScene::8117613346450340542::1698864615::0::1::::<><>::res://inventory/item/pick_up.gd<>uid://cdbxt2sguhyss::::res://inventory/item/sketchfab_model.tscn<>uid://cpxn5cqryvnkt::::res://3D models/key/Key.tres<>uid://055rkpuhdp48::::res://3D models/key/key_0.png<>res://inventory/slot_data.gd
+pick_up_note.tscn::PackedScene::5630158636838955504::1698864615::0::1::::<><>::res://inventory/item/pick_up.gd<>uid://bbc7rnjg575xh::::res://3D models/Note/Note1.tres<>uid://cnnu8vs3x0h5u::::res://3D models/Note/folded_wrinkled_paper.glb<>res://inventory/slot_data.gd<>uid://cnyk0dyy4dpq7::::res://3D models/Note/Note1.png
+sketchfab_model.tscn::PackedScene::4986904143208756878::1699114692::0::1::::<><>::uid://055rkpuhdp48::::res://3D models/key/key_0.png
+::res://TicTacToe/::1699114710
+TTT.gd::GDScript::-1::1698864615::0::1::::<>Node3D<>::
+TTTTest.tscn::PackedScene::1419473905434618819::1699114710::0::1::::<><>::uid://dgpjxoygnvyy4::::res://assets/simple_fpsplayer/Player.tscn<>res://MainScene.gd<>res://TicTacToe/TTT.gd<>uid://bnv82oo1mqpgb::::res://TicTacToe/TTT_Button.tscn<>res://inventory/Inventory_Interface.gd<>uid://d108xt76uvefx::::res://inventory/inventory.tscn<>uid://b7t254g1xu2ab::::res://inventory/slot.tscn<>uid://c220l0xmp61r4::::res://3D models/Marker/marker_pickup.tscn
+TTT_Button.gd::GDScript::-1::1699106490::0::1::::<>Node3D<>::
+TTT_Button.tscn::PackedScene::3344280219171670153::1699114694::0::1::::<><>::res://TicTacToe/TTT_Button.gd

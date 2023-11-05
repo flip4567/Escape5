@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bl6cyvuysewfo"]
+[gd_scene load_steps=27 format=3 uid="uid://bl6cyvuysewfo"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_8etef"]
 [ext_resource type="Script" path="res://MainScene.gd" id="1_b25ig"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://inventory/slot_data.gd" id="6_lwdl8"]
 [ext_resource type="PackedScene" uid="uid://b7t254g1xu2ab" path="res://inventory/slot.tscn" id="8_qixa7"]
 [ext_resource type="Script" path="res://door.gd" id="11_3v2bi"]
+[ext_resource type="Script" path="res://Time_Control.gd" id="11_utoby"]
 [ext_resource type="PackedScene" uid="uid://cfdwjqnf3or0h" path="res://inventory/item/Note1.tscn" id="12_grhal"]
 [ext_resource type="Script" path="res://3D models/Note/pick_up_note1.gd" id="13_hqk42"]
 [ext_resource type="Resource" uid="uid://bbc7rnjg575xh" path="res://3D models/Note/Note1.tres" id="14_ripmv"]
@@ -19,6 +20,10 @@
 [sub_resource type="Resource" id="Resource_i48du"]
 script = ExtResource("6_lwdl8")
 item_data = ExtResource("5_5o2br")
+
+[sub_resource type="LabelSettings" id="LabelSettings_nxoa8"]
+font_size = 46
+font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ivedr"]
 
@@ -93,6 +98,25 @@ layout_mode = 0
 offset_right = 64.0
 offset_bottom = 64.0
 
+[node name="Time_Control" type="Node" parent="UI"]
+script = ExtResource("11_utoby")
+
+[node name="Label" type="Label" parent="UI/Time_Control"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -107.0
+offset_bottom = 71.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "0 : 0"
+label_settings = SubResource("LabelSettings_nxoa8")
+
+[node name="Timer" type="Timer" parent="UI/Time_Control"]
+process_callback = 0
+autostart = true
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.999157, 0.0410284, 0.00109413, 0.001616, 0.0126889, 0.999918, 0.0410112, 0.999077, -0.0127444, 2.7975, 1.23025, -12.4506)
 mesh = SubResource("BoxMesh_ivedr")
@@ -137,4 +161,5 @@ shape = SubResource("BoxShape3D_uy8ni")
 [node name="marker_pickup" parent="." groups=["Marker"] instance=ExtResource("3_lbqsw")]
 transform = Transform3D(0.245, 0, 0, 0, 0.245, 0, 0, 0, 0.245, 4.29131, 1.88338, -4.69453)
 
+[connection signal="timeout" from="UI/Time_Control/Timer" to="UI/Time_Control" method="_on_timer_timeout"]
 [connection signal="area_entered" from="MeshInstance3D2/RigidBody3D/Area3D" to="MeshInstance3D2" method="_on_area_3d_area_entered"]

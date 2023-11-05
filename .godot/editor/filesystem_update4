@@ -1,20 +1,15 @@
-res://inventory/item/sketchfab_model.tscn
+res://MainScene.tscn
 res://assets/simple_fpsplayer/Player.gd
 res://inventory/TestInv.tres
-res://MainScene.tscn
+res://inventory/item/sketchfab_model.tscn
+res://3D models/Marker/marker_pickup.tscn
 res://TicTacToe/TTTTest.tscn
 res://TicTacToe/TTT_Button.tscn
-res://assets/simple_fpsplayer/Player.tscn
 res://inventory/item/Key1.tscn
-res://inventory/item/Marker.tscn
 res://inventory/item/Note1.tscn
 res://3D models/key/key.tscn
 res://inventory/inventory.tscn
-res://TicTacToe/TTT_Button.gd
-res://3D models/Marker/marker.tscn
-res://3D models/Marker/Marker.tres
-res://3D models/Marker/pick_up_marker.gd
-res://inventory/item/ItemManager.gd
-res://assets/simple_fpsplayer/Player_manager.gd
-res://3D models/Marker/marker_pickup.tscn
 res://3D models/Marker/Marker_Equip.tscn
+res://assets/simple_fpsplayer/Player.tscn
+res://MainScene.gd
+res://Time_Control.gd
