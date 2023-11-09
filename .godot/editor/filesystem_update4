@@ -1,15 +1,3 @@
-res://MainScene.tscn
 res://assets/simple_fpsplayer/Player.gd
 res://inventory/TestInv.tres
-res://inventory/item/sketchfab_model.tscn
-res://3D models/Marker/marker_pickup.tscn
-res://TicTacToe/TTTTest.tscn
-res://TicTacToe/TTT_Button.tscn
-res://inventory/item/Key1.tscn
-res://inventory/item/Note1.tscn
-res://3D models/key/key.tscn
-res://inventory/inventory.tscn
-res://3D models/Marker/Marker_Equip.tscn
-res://assets/simple_fpsplayer/Player.tscn
-res://MainScene.gd
-res://Time_Control.gd
+res://MainScene.tscn
