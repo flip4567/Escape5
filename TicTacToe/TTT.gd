@@ -1,7 +1,9 @@
 extends Node3D
 
 @export var TSlot: Array[Node3D]
+var count = -1 # 0 means O first, -1 means X first
 var win = 0
+var rng = RandomNumberGenerator.new()
 # 0 | 1 | 2 
 #---+---+---
 # 3 | 4 | 5
@@ -16,11 +18,33 @@ func _ready():
 
 
 func _process(delta):
-	win = CheckWin()
+	var temp = 0
+	for i in TSlot:       #Counts all empty cells, detects O's
+		if i.state == 1:
+			temp += 1
+
+	if temp > count:      #When a new O is detected, a new X is randomly placed
+		temp = count
+		temp = rng.randi_range(0,8-count)
+		for i in TSlot:   #Places an X in an empty slot
+			if i.state == 0:
+				if temp == 0:
+					i.state = 2
+					count += 1
+				temp -= 1
+
+	win = CheckWin()      #Creates an output if a win condition is met
 	if win != 0: print(win)
 
+	if count == 4:
+		count = -1
+		print("Reset")
+		for i in TSlot:
+			i.state = 0
+
+
 func CheckWin():
-	#Win Conditions
+	#Win Conditions BRUTE FORCE FTW!!!
 	#012, 345, 678 -
 	if TSlot[0].state == TSlot[1].state and TSlot[0].state == TSlot[2].state:
 		if TSlot[0].state != 0:

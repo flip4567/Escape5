@@ -1,10 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dek5uhm234i5v"]
+[gd_scene load_steps=4 format=3 uid="uid://dek5uhm234i5v"]
 
 [ext_resource type="PackedScene" uid="uid://ctmijx8pqxp1p" path="res://3D models/Marker/marker.glb" id="1_301lo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4oldb"]
 radius = 0.816169
 height = 5.14331
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1y40c"]
+size = Vector3(1, 2.10213, 1)
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(0.0754943, 0.0347796, -0.0177761, -0.039039, 0.0659482, -0.0367668, -0.00125213, 0.0408193, 0.0745467, 0, 0, 0)
@@ -15,3 +18,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.293468, -1.19209e-07, -0.48
 [node name="CollisionShape3D" type="CollisionShape3D" parent="marker"]
 transform = Transform3D(0.866514, -0.46528, -0.180736, 0.499137, 0.805026, 0.320613, -0.00367763, -0.368027, 0.929806, -0.206677, 5.54581, -0.15736)
 shape = SubResource("CapsuleShape3D_4oldb")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.786336, -0.581374, 0.208998, 0.45907, 0.776245, 0.432086, -0.413437, -0.24382, 0.877281, 0, 0, 0)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.245544, 3.53921, -0.0210809, -0.0366514, 20.7653, 0.0299902, 0.0351558, -3.07074, 0.178505, 5.34568, 21.1341, -0.569868)
+shape = SubResource("BoxShape3D_1y40c")

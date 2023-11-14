@@ -1,22 +1,82 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnv82oo1mqpgb"]
+[gd_scene load_steps=10 format=3 uid="uid://bnv82oo1mqpgb"]
 
 [ext_resource type="Script" path="res://TicTacToe/TTT_Button.gd" id="1_aks3e"]
+[ext_resource type="Texture2D" uid="uid://bmfss748py8tf" path="res://assets/OX.png" id="2_sr2bu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_th0vw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_uxhtk"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5s72"]
+atlas = ExtResource("2_sr2bu")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xogwj"]
+atlas = ExtResource("2_sr2bu")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1ve1"]
+atlas = ExtResource("2_sr2bu")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsfoa"]
+atlas = ExtResource("2_sr2bu")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_usv7d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o5s72")
+}],
+"loop": true,
+"name": &"Blank",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xogwj")
+}],
+"loop": true,
+"name": &"O",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1ve1")
+}],
+"loop": true,
+"name": &"Select",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsfoa")
+}],
+"loop": true,
+"name": &"X",
+"speed": 5.0
+}]
+
 [node name="TTT_Button" type="Node3D"]
 script = ExtResource("1_aks3e")
 
 [node name="Area3D" type="Area3D" parent="."]
-collision_mask = 2
+collision_layer = 8
+collision_mask = 8
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.00620657, 0, 0, -0.505407)
 shape = SubResource("BoxShape3D_th0vw")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
 mesh = SubResource("BoxMesh_uxhtk")
 skeleton = NodePath("../..")
 
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(5.85893, 0, 0, 0, 5.85893, 0, 0, 0, 1, 0, 0, -0.533423)
+sprite_frames = SubResource("SpriteFrames_usv7d")
+animation = &"X"
+
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]
