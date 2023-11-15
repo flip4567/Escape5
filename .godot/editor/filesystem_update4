@@ -1,9 +1,14 @@
-res://3D models/Marker/Marker_Equip.tscn
 res://assets/simple_fpsplayer/Player.gd
 res://inventory/TestInv.tres
-res://TicTacToe/TTT_Button.tscn
+res://Menus/Scene_Change.gd
+res://Menus/Death_Menu.tscn
 res://MainScene.tscn
 res://TicTacToe/TTTTest.tscn
-res://3D models/Marker/marker_pickup.tscn
-res://TicTacToe/TTT_Button.gd
-res://TicTacToe/TTT.gd
+res://Menus/Start_Menu.tscn
+res://Menus/Ending_1.tscn
+res://Menus/Ending_2.tscn
+res://Menus/Ending_3.tscn
+res://Menus/Ending_4.tscn
+res://Menus/Ending_5.tscn
+res://TicTacToe/TTT_Button.tscn
+res://Menus/3D_Button.gd

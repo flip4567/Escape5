@@ -1,0 +1,196 @@
+[gd_scene load_steps=18 format=3 uid="uid://cr33ov12j8orc"]
+
+[ext_resource type="PackedScene" uid="uid://qo57jko6gtn5" path="res://3D models/MainRoom/room_prototype_v_2.tscn" id="1_lvk77"]
+[ext_resource type="PackedScene" uid="uid://b7e2qyits6cm7" path="res://3D models/keypad/Keypa.tscn" id="2_7drxr"]
+[ext_resource type="PackedScene" uid="uid://k8ci5dixb7cv" path="res://3D models/Monster/monster_1.tscn" id="3_bdr4q"]
+[ext_resource type="Script" path="res://Menus/3D_Button.gd" id="4_db78c"]
+[ext_resource type="Texture2D" uid="uid://c7816qpdixrh0" path="res://assets/Menu_Assets/Start_Button_0.png" id="5_nkeqy"]
+[ext_resource type="Texture2D" uid="uid://dqxr6m6hhlyob" path="res://assets/Menu_Assets/Start_Button_1.png" id="6_30wss"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fdpox"]
+albedo_color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_5y5ta"]
+
+[sub_resource type="Environment" id="Environment_a2vsc"]
+ambient_light_color = Color(0, 0.145098, 0.427451, 1)
+fog_enabled = true
+fog_light_color = Color(0.0980392, 0.109804, 0.129412, 1)
+fog_light_energy = 0.36
+fog_density = 0.4218
+fog_sky_affect = 0.0
+volumetric_fog_enabled = true
+
+[sub_resource type="FogMaterial" id="FogMaterial_uw832"]
+density = 4.84
+albedo = Color(0.227451, 0.227451, 0.227451, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tte04"]
+atlas = ExtResource("5_nkeqy")
+region = Rect2(0, 0, 134, 134)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p550o"]
+atlas = ExtResource("6_30wss")
+region = Rect2(0, 0, 134, 134)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k2k6v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tte04")
+}],
+"loop": true,
+"name": &"high",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p550o")
+}],
+"loop": true,
+"name": &"low",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yrb77"]
+
+[sub_resource type="Animation" id="Animation_wwe5v"]
+resource_name = "Close"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.416213, 1.38102, 0.119564), Vector3(0.416213, 0.31772, 0.119564)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Monster1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.0503167, -0.522145, 1.10331), Vector3(-0.358594, -0.522145, 1.10331)]
+}
+
+[sub_resource type="Animation" id="Animation_5dfwh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.416213, 1.38102, 0.119564)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Monster1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.0503167, -0.522145, 1.10331)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nlr0l"]
+_data = {
+"Close": SubResource("Animation_wwe5v"),
+"RESET": SubResource("Animation_5dfwh")
+}
+
+[node name="Start Menu" type="Node3D"]
+
+[node name="RoomPrototypeV2" parent="." instance=ExtResource("1_lvk77")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RoomPrototypeV2"]
+transform = Transform3D(1.48757, 0, 0, 0, -1, 2.05463e-07, 0, -8.74228e-08, -2.35022, 1.79536, 0.994301, 2.92028)
+material_override = SubResource("StandardMaterial3D_fdpox")
+mesh = SubResource("PlaneMesh_5y5ta")
+skeleton = NodePath("../..")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.69356, 0.47924, 1.35441)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_a2vsc")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.997647, 0, -0.0685551, 0, 1, 0, 0.0685551, 0, -0.997647, 1.67302, 0.494468, -1.21235)
+
+[node name="Keypad" parent="." instance=ExtResource("2_7drxr")]
+transform = Transform3D(0.112, 0, 0, 0, 0.112, 0, 0, 0, 0.112, 1.30118, 0.500994, 1.97111)
+
+[node name="FogVolume" type="FogVolume" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.70289, 0, 2.93882)
+material = SubResource("FogMaterial_uw832")
+
+[node name="3D_Button" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.30205, 0.522145, 1.9406)
+script = ExtResource("4_db78c")
+goTo = "res://MainScene.tscn"
+delay = 0.7
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="3D_Button"]
+transform = Transform3D(-0.155, 0, -2.34044e-08, 0, 0.155, 0, 2.34044e-08, 0, -0.155, 0, 0, 0)
+sprite_frames = SubResource("SpriteFrames_k2k6v")
+animation = &"low"
+autoplay = "low"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3D_Button"]
+transform = Transform3D(0.243655, 0, 0, 0, 0.242452, 0, 0, 0, 0.073927, 0, 0, 0)
+shape = SubResource("BoxShape3D_yrb77")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3D_Button"]
+transform = Transform3D(0.737127, 0, 0, 0, 1.31134e-07, 0.868935, 0, -1, 1.13947e-07, 0.416213, 1.38102, 0.119564)
+material_override = SubResource("StandardMaterial3D_fdpox")
+mesh = SubResource("PlaneMesh_5y5ta")
+skeleton = NodePath("../..")
+
+[node name="Monster1" parent="3D_Button" instance=ExtResource("3_bdr4q")]
+transform = Transform3D(-0.0628615, 0.016536, -5.49552e-09, 0.016536, 0.0628615, 1.44562e-09, 5.68248e-09, 0, -0.065, 0.0503167, -0.522145, 1.10331)
+
+[node name="metarig" parent="3D_Button/Monster1" index="0"]
+transform = Transform3D(6.52408, 0, 1.13687e-13, 0, 6.52408, 1.42109e-14, 0, 0, 6.52408, 0, 0, 0)
+
+[node name="Skeleton3D" parent="3D_Button/Monster1/metarig" index="0"]
+transform = Transform3D(1, 0, 0, 2.15888e-22, 1, 1.08324e-15, -7.10543e-15, 0, 1, 0, 0, 0)
+bones/18/rotation = Quaternion(-0.281525, -0.374525, 0.346475, 0.640475)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="3D_Button/Monster1"]
+transform = Transform3D(15.3846, 3.09944e-06, 2.60144e-06, -3.09944e-06, 15.3846, -6.84318e-07, -2.60144e-06, 6.84317e-07, 15.3846, -0.324635, 12.6373, 1.89382)
+light_energy = 10.127
+spot_range = 0.356
+spot_angle = 3.3
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="3D_Button/Monster1"]
+transform = Transform3D(15.3846, 6.4373e-06, 5.20289e-06, -6.4373e-06, 15.3846, -1.36864e-06, -5.20289e-06, 1.36864e-06, 15.3846, 0.318621, 12.6306, 1.89382)
+light_energy = 10.127
+spot_range = 0.356
+spot_angle = 3.3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="3D_Button"]
+libraries = {
+"": SubResource("AnimationLibrary_nlr0l")
+}
+
+[connection signal="mouse_entered" from="3D_Button" to="3D_Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="3D_Button" to="3D_Button" method="_on_mouse_exited"]
+
+[editable path="3D_Button/Monster1"]

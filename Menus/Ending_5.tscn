@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyludnm27wvt7"]
+
+[ext_resource type="Texture2D" uid="uid://lmw52mv7ckvj" path="res://assets/Menu_Assets/Black.png" id="1_ol6uk"]
+[ext_resource type="Script" path="res://Menus/Scene_Change.gd" id="2_cvc1b"]
+
+[node name="Ending_5" type="Node2D"]
+
+[node name="Black" type="Sprite2D" parent="."]
+position = Vector2(569, 324)
+scale = Vector2(4, 4)
+texture = ExtResource("1_ol6uk")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Scene_Change" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -149.5
+offset_top = -62.0
+offset_right = 149.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+text = "Return to Main Menu"
+script = ExtResource("2_cvc1b")
+goTo = "res://Menus/Start_Menu.tscn"
+
+[node name="TextEdit" type="TextEdit" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.0
+offset_top = -63.0
+offset_right = 163.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/background_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 67
+text = "You Died!"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+
+[connection signal="button_up" from="Control/Scene_Change" to="Control/Scene_Change" method="_on_button_up"]
