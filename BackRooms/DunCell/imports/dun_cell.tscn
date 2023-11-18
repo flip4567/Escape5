@@ -1,10 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://bejt3pqbh5hhw"]
+[gd_scene load_steps=18 format=3 uid="uid://bejt3pqbh5hhw"]
 
 [ext_resource type="Texture2D" uid="uid://pypg3e77tne3" path="res://BackRooms/DunCell/imports/DunCell_TexturesCom_Cement_1x1_512_albedo.png" id="2_4fp58"]
 [ext_resource type="Script" path="res://BackRooms/DunCell/imports/DunCell.gd" id="2_6c6f6"]
+[ext_resource type="Texture2D" uid="uid://b1jrbmimfw8od" path="res://BackRooms/Floor.jpg" id="2_uljvb"]
 [ext_resource type="Texture2D" uid="uid://dkg7jbmwlbl8g" path="res://BackRooms/DunCell/imports/DunCell_TexturesCom_Cement_1x1_512_normals.png" id="3_kknib"]
+[ext_resource type="Texture2D" uid="uid://bsfjc2t3k1hjk" path="res://BackRooms/TexturesCom_OfficeCeiling_1K_albedo.png" id="5_1c0lf"]
 [ext_resource type="Texture2D" uid="uid://cvewhq4x36jhm" path="res://BackRooms/DunCell/imports/DunCell_TexturesCom_Pavement_CobblestoneStreet5_2x2_1K_albedo.png" id="6_ym51b"]
 [ext_resource type="Texture2D" uid="uid://cmnikjkgv3d16" path="res://BackRooms/DunCell/imports/DunCell_TexturesCom_Pavement_CobblestoneStreet5_2x2_1K_normals.png" id="7_32ths"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krh8k"]
+albedo_texture = ExtResource("2_uljvb")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ei2i7"]
 resource_name = "floor"
@@ -49,6 +54,9 @@ shadow_mesh = SubResource("ArrayMesh_acdmr")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ccmtp"]
 size = Vector3(1, 0.0423492, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n8mhq"]
+albedo_texture = ExtResource("5_1c0lf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5753o"]
 resource_name = "ceiling"
@@ -98,6 +106,7 @@ points = PackedVector3Array(-0.5, -0.020103, -0.5, -0.5, 0.020103, -0.5, 0.5, -0
 script = ExtResource("2_6c6f6")
 
 [node name="floor" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_krh8k")
 mesh = SubResource("ArrayMesh_iytqo")
 skeleton = NodePath("")
 
@@ -108,6 +117,7 @@ shape = SubResource("BoxShape3D_ccmtp")
 
 [node name="ceiling" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.42, 0)
+material_override = SubResource("StandardMaterial3D_n8mhq")
 mesh = SubResource("ArrayMesh_v86bs")
 skeleton = NodePath("")
 

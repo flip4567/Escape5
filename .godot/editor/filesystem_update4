@@ -1,14 +1,12 @@
+res://TicTacToe/TTTTest.tscn
 res://assets/simple_fpsplayer/Player.gd
 res://inventory/TestInv.tres
-res://Menus/Scene_Change.gd
-res://Menus/Death_Menu.tscn
+res://BackRooms/DungeonTiles.tres
+res://BackRooms/DunCell/imports/Walls/BackRoomsWall.tres
 res://MainScene.tscn
-res://TicTacToe/TTTTest.tscn
 res://Menus/Start_Menu.tscn
-res://Menus/Ending_1.tscn
-res://Menus/Ending_2.tscn
-res://Menus/Ending_3.tscn
-res://Menus/Ending_4.tscn
-res://Menus/Ending_5.tscn
-res://TicTacToe/TTT_Button.tscn
-res://Menus/3D_Button.gd
+res://BackRooms/dun_gen.tscn
+res://BackRooms/DunCell/imports/dun_cell.tscn
+res://assets/simple_fpsplayer/Player.tscn
+res://BackRooms/DunCell/imports/Walls/wall_up.tscn
+res://3D models/MainRoom/room_prototype_v_3.tscn

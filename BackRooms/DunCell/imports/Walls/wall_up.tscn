@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cm6fl4k1lr1wl"]
+[gd_scene load_steps=8 format=3 uid="uid://cm6fl4k1lr1wl"]
 
+[ext_resource type="Material" uid="uid://hklcu7wyorfv" path="res://BackRooms/DunCell/imports/Walls/BackRoomsWall.tres" id="1_bjoiq"]
 [ext_resource type="Texture2D" uid="uid://huc052xwvnuq" path="res://BackRooms/DunCell/imports/DunCell_TexturesCom_MixedMedievalBricks_1K_albedo.png" id="1_f5vis"]
 [ext_resource type="Texture2D" uid="uid://pvcdfq7dtuvs" path="res://BackRooms/DunCell/imports/DunCell_TexturesCom_MixedMedievalBricks_1K_normals.png" id="2_cg5ge"]
 
@@ -48,6 +49,7 @@ shadow_mesh = SubResource("ArrayMesh_w6f5e")
 points = PackedVector3Array(-0.5, 0.02, -0.5, -0.5, 0.02, -0.46, -0.5, 2.39977, -0.5, 0.5, 0.02, -0.5, 0.5, 0.02, -0.46, -0.5, 2.39977, -0.46, 0.5, 2.39977, -0.5, 0.5, 2.39977, -0.46)
 
 [node name="wall_up" type="MeshInstance3D"]
+material_override = ExtResource("1_bjoiq")
 mesh = SubResource("ArrayMesh_pgjgh")
 skeleton = NodePath("")
 
