@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfn68crsq071c"]
+
+[ext_resource type="PackedScene" uid="uid://ccbeivy85jhm8" path="res://3D models/Light/outdor_ceiling_light.glb" id="1_eyfan"]
+
+[node name="outdor_ceiling_light" instance=ExtResource("1_eyfan")]
+transform = Transform3D(1.70787, 0, 0, 0, 1, 0, 0, 0, 1.89582, 0, 0, 0)

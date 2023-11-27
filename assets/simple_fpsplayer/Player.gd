@@ -45,9 +45,19 @@ func pick_object():
 	var collider = hand.get_collider()
 	if collider is RigidBody3D and  collider.is_in_group("Key1"):
 		ItemManager.Pick_Up_Key1.emit()
-	elif collider is RigidBody3D and  collider.is_in_group("Note1"):
+	if collider is RigidBody3D and  collider.is_in_group("Key2"):
+		ItemManager.Pick_Up_Key2.emit()
+	if collider is RigidBody3D and  collider.is_in_group("Key3"):
+		ItemManager.Pick_Up_Key3.emit()
+	if collider is RigidBody3D and  collider.is_in_group("Key4"):
+		ItemManager.Pick_Up_Key4.emit()
+	if collider is RigidBody3D and  collider.is_in_group("Key5"):
+		ItemManager.Pick_Up_Key5.emit()
+	if collider is RigidBody3D and  collider.is_in_group("Key6"):
+		ItemManager.Pick_Up_Key6.emit()
+	if collider is RigidBody3D and  collider.is_in_group("Note1"):
 		ItemManager.Pick_Up_Note1.emit()
-	elif collider is RigidBody3D and collider.is_in_group("Marker"):
+	if collider is RigidBody3D and collider.is_in_group("Marker"):
 		ItemManager.Pick_Up_Marker.emit()
 
 func _input(event):

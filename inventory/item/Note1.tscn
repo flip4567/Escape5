@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cfdwjqnf3or0h"]
+[gd_scene load_steps=8 format=3 uid="uid://cfdwjqnf3or0h"]
 
 [ext_resource type="Script" path="res://3D models/key/pick_up_key1.gd" id="1_805j6"]
 [ext_resource type="Resource" uid="uid://bbc7rnjg575xh" path="res://3D models/Note/Note1.tres" id="2_1r5cv"]
@@ -12,8 +12,6 @@ item_data = ExtResource("2_1r5cv")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bd53o"]
 size = Vector3(0.426074, 0.0210992, 0.326229)
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_5om44"]
 
 [node name="Note1" type="RigidBody3D"]
 contact_monitor = true
@@ -30,13 +28,3 @@ texture = ExtResource("3_jfx5y")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 17.235, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_bd53o")
-
-[node name="Area3D" type="Area3D" parent="."]
-collision_mask = 2
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1.418, 0, 0, 0, 1.418, 0, 0, 0, 1.418, 0, 0, 0)
-shape = SubResource("SphereShape3D_5om44")
-
-[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

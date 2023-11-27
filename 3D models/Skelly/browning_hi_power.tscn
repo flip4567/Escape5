@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3a7e3e8qe6p8"]
+
+[ext_resource type="PackedScene" uid="uid://dexyi14taooj1" path="res://3D models/Skelly/browning_hi-power.glb" id="1_omfts"]
+
+[node name="browning_hi-power" instance=ExtResource("1_omfts")]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj4k5cbk8x6mh"]
+
+[ext_resource type="PackedScene" uid="uid://dsxeqch1voox" path="res://3D models/Skelly/Skelly.glb" id="1_m4q3j"]
+
+[node name="Skelly" instance=ExtResource("1_m4q3j")]

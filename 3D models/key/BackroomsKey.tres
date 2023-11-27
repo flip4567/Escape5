@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b601wg05mo6b7"]
+
+[ext_resource type="Script" path="res://inventory/item/item_data.gd" id="1_yttp5"]
+[ext_resource type="Texture2D" uid="uid://cak06dsxc6v06" path="res://BackRooms/DunCell/OldKey.jpg" id="2_s5jwb"]
+
+[resource]
+script = ExtResource("1_yttp5")
+name = "Key"
+description = "A mysterious key. its origin unkown (unless you played escape 3)"
+texture = ExtResource("2_s5jwb")
