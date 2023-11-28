@@ -1,21 +1,11 @@
-res://BackRooms/dun_gen.tscn
+res://MainScene.tscn
 res://assets/simple_fpsplayer/Player.gd
 res://inventory/TestInv.tres
 res://BackRooms/DunCell/imports/Walls/BackRoomsWall.tres
 res://BackRooms/DungeonTiles.tres
-res://MainScene.tscn
 res://3D models/key/key.tscn
 res://inventory/item/Key1.tscn
-res://3D models/Light/exit light/human_skull.tscn
 res://3D models/Skull/human_skull.tscn
-res://3D models/Note/Note1.tres
 res://inventory/item/Note1.tscn
-res://3D models/Note/pick_up_note1.gd
-res://3D models/key/pick_up_key1.gd
-res://3D models/key/pick_up_key2.gd
-res://3D models/key/pick_up_key3.gd
-res://3D models/key/pick_up_key4.gd
-res://3D models/key/pick_up_key5.gd
-res://3D models/key/pick_up_key6.gd
-res://3D models/Marker/pick_up_marker.gd
-res://3D models/Note/Note2.tres
+res://3D models/Monster/monster_1.tscn
+res://3D models/Skelly/browning_hi_power.tscn
