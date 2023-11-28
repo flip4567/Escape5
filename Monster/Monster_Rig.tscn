@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckk1lmx80j7ny"]
+
+[ext_resource type="Script" path="res://Monster/Monster_Rig.gd" id="1_nq7bo"]
+[ext_resource type="Script" path="res://Monster/Rig.gd" id="2_flko8"]
+[ext_resource type="PackedScene" uid="uid://k8ci5dixb7cv" path="res://3D models/Monster/monster_1.tscn" id="3_d62ej"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_qhunk"]
+
+[node name="Monster_Rig" type="Node3D"]
+script = ExtResource("1_nq7bo")
+
+[node name="Head" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0472369, 15.5456, 0)
+mesh = SubResource("SphereMesh_qhunk")
+script = ExtResource("2_flko8")
+
+[node name="Monster1" parent="." instance=ExtResource("3_d62ej")]
+
+[editable path="Monster1"]
