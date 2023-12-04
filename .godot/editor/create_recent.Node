@@ -1,3 +1,5 @@
+AnimationTree
+AnimationPlayer
 Node
 Node3D
 CollisionShape3D
@@ -10,7 +12,6 @@ CSGBox3D
 DirectionalLight3D
 WorldEnvironment
 CollisionPolygon3D
-AnimationPlayer
 Area3D
 AnimatedSprite3D
 Sprite3D

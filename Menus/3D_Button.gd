@@ -7,7 +7,7 @@ var hovered = false
 var wait = 0
 
 func _process(delta):
-	if Input.is_action_just_released("MouseDown") && wait == 0:
+	if Input.is_action_just_released("MouseDown") && wait == 0 && hovered:
 		wait = delay + 1
 	if wait != 0:
 		wait -= delta

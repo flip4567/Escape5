@@ -4,6 +4,8 @@ extends Node3D
 var count = -1 # 0 means O first, -1 means X first
 var win = 0
 var rng = RandomNumberGenerator.new()
+@export_file("*.tscn","*.scn") var gameWin
+@export_file("*.tscn","*.scn") var gameLose
 # 0 | 1 | 2 
 #---+---+---
 # 3 | 4 | 5
@@ -34,7 +36,10 @@ func _process(delta):
 				temp -= 1
 
 	win = CheckWin()      #Creates an output if a win condition is met
-	if win != 0: print(win)
+	if win == 1:
+		get_tree().change_scene_to_file(gameWin)
+	elif win == 2:
+		get_tree().change_scene_to_file(gameLose)
 
 	if count == 4:
 		count = -1
