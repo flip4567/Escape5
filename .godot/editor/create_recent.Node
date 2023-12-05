@@ -1,6 +1,6 @@
-AudioStreamPlayer3D
 CollisionShape3D
 Area3D
+AudioStreamPlayer3D
 Node3D
 Marker3D
 StaticBody3D
