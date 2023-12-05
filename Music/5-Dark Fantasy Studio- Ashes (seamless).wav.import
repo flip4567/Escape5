@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bjunxvfhcth6g"
+path="res://.godot/imported/5-Dark Fantasy Studio- Ashes (seamless).wav-0539e725104843bdc7a37ae5c0bd0351.sample"
+
+[deps]
+
+source_file="res://Music/5-Dark Fantasy Studio- Ashes (seamless).wav"
+dest_files=["res://.godot/imported/5-Dark Fantasy Studio- Ashes (seamless).wav-0539e725104843bdc7a37ae5c0bd0351.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
