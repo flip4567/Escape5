@@ -1,5 +1,18 @@
 CollisionShape3D
 Area3D
+<<<<<<< Updated upstream
+=======
+Node3D
+AudioListener3D
+Marker3D
+AudioStreamPlayer3D
+StaticBody3D
+AnimationPlayer
+RigidBody3D
+Node
+SpotLight3D
+OmniLight3D
+>>>>>>> Stashed changes
 MeshInstance3D
 StaticBody3D
 Node3D

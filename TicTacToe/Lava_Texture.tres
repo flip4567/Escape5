@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_resource type="NoiseTexture2D" load_steps=3 format=3 uid="uid://bv2iyfd0nvvs8"]
+=======
+[gd_resource type="NoiseTexture2D" load_steps=3 format=3 uid="uid://m0sfajv5hln8"]
+>>>>>>> Stashed changes
 
 [sub_resource type="Gradient" id="Gradient_hqttp"]
 offsets = PackedFloat32Array(0.0324324, 0.535135, 0.713513, 1)

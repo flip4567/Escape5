@@ -1,14 +1,54 @@
-res://MainScene.tscn
+res://backrooms2.tscn
 res://assets/simple_fpsplayer/Player.gd
 res://inventory/TestInv.tres
 res://BackRooms/DunCell/imports/Walls/BackRoomsWall.tres
 res://BackRooms/DungeonTiles.tres
 res://TicTacToe/Lava_Texture.tres
+<<<<<<< Updated upstream
 res://Lava.gd
+=======
+>>>>>>> Stashed changes
 res://Menus/Death_Menu.tscn
 res://Menus/Start_Menu.tscn
 res://TicTacToe/TTTTest.tscn
 res://Menus/Ending_2.tscn
 res://Menus/Ending_1.tscn
+<<<<<<< Updated upstream
 res://Area_Transition.gd
 res://Menus/Ending_3.tscn
+=======
+res://MainScene.tscn
+res://Menus/Ending_3.tscn
+res://inventory/item/ItemManager.gd
+res://3D models/Note/pick_up_note1.gd
+res://inventory/item/pick_up_note2.gd
+res://Menus/3D_Button.gd
+res://Area_Transition.gd
+res://CloseElv.gd
+res://door.gd
+res://BackRooms/DunCell/imports/DunCell.gd
+res://BackRooms/DunMesh.gd
+res://BackRooms/dun_gen.gd
+res://inventory/inventory.gd
+res://inventory/inventory_data.gd
+res://inventory/Inventory_Interface.gd
+res://inventory/item/item_data.gd
+res://3D models/key/key.gd
+res://3D models/key/KeyHole/key_hole1.gd
+res://Lava.gd
+res://MainScene.gd
+res://MusicPlayer.gd
+res://inventory/pick_up.gd
+res://3D models/key/pick_up_key1.gd
+res://3D models/key/pick_up_key2.gd
+res://3D models/key/pick_up_key3.gd
+res://3D models/key/pick_up_key4.gd
+res://3D models/key/pick_up_key5.gd
+res://3D models/key/pick_up_key6.gd
+res://3D models/Marker/pick_up_marker.gd
+res://assets/simple_fpsplayer/Player_manager.gd
+res://assets/simple_fpsplayer/README.md
+res://tele.gd
+res://TelePort.gd
+res://3D models/key/key.tscn
+>>>>>>> Stashed changes

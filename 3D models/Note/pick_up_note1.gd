@@ -4,7 +4,10 @@ extends RigidBody3D
 @export var slot_data: SlotData
 
 @onready var sprite_3d: Sprite3D = $Sprite3D
-@onready var player = $"../../../Player"
+@onready var player2 = $"../../../Player"
+@onready var player = $"../../Player"
+
+
 
 
 func _ready():

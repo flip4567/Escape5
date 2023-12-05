@@ -7,19 +7,14 @@ extends RigidBody3D
 @onready var player2 = $"../../../Player"
 @onready var player = $"../../Player"
 
+
+
 func _ready():
 	sprite_3d.texture = slot_data.item_data.texture
-	ItemManager.Pick_Up_Key6.connect(Picking_up)
+	ItemManager.Pick_Up_Note2.connect(Picking_up)
 
 func Picking_up():
 	
 	if player.inventory_data.pick_up_slot_data(slot_data):
 		queue_free()
 	
-
-
-
-
-
-
-
