@@ -1,14 +1,14 @@
-res://MainScene.tscn
+res://backrooms3.tscn
 res://assets/simple_fpsplayer/Player.gd
 res://inventory/TestInv.tres
 res://BackRooms/DunCell/imports/Walls/BackRoomsWall.tres
 res://BackRooms/DungeonTiles.tres
 res://TicTacToe/Lava_Texture.tres
-res://Lava.gd
 res://Menus/Death_Menu.tscn
 res://Menus/Start_Menu.tscn
 res://TicTacToe/TTTTest.tscn
 res://Menus/Ending_2.tscn
 res://Menus/Ending_1.tscn
-res://Area_Transition.gd
+res://MainScene.tscn
 res://Menus/Ending_3.tscn
+res://inventory/item/ItemManager.gd
