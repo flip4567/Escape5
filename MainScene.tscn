@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://bl6cyvuysewfo"]
+[gd_scene load_steps=105 format=3 uid="uid://bl6cyvuysewfo"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_8etef"]
 [ext_resource type="Script" path="res://MainScene.gd" id="1_b25ig"]
@@ -39,6 +39,9 @@
 [ext_resource type="PackedScene" uid="uid://c3a7e3e8qe6p8" path="res://3D models/Skelly/browning_hi_power.tscn" id="37_7vew5"]
 [ext_resource type="Script" path="res://TicTacToe/TTT.gd" id="38_13e4o"]
 [ext_resource type="PackedScene" uid="uid://bnv82oo1mqpgb" path="res://TicTacToe/TTT_Button.tscn" id="39_gy1v5"]
+[ext_resource type="Texture2D" uid="uid://bv2iyfd0nvvs8" path="res://TicTacToe/Lava_Texture.tres" id="40_gk40v"]
+[ext_resource type="Script" path="res://Area_Transition.gd" id="42_tj6ka"]
+[ext_resource type="Material" uid="uid://dogt7gmvynypt" path="res://BackRooms/DunCell/imports/ceiling.tres" id="42_umw8w"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nxoa8"]
 font_size = 46
@@ -52,10 +55,10 @@ tonemap_exposure = 0.9
 fog_enabled = true
 fog_light_color = Color(0.0980392, 0.109804, 0.129412, 1)
 fog_light_energy = 0.36
-fog_density = 0.4609
+fog_density = 0.0
 fog_sky_affect = 0.0
 volumetric_fog_enabled = true
-volumetric_fog_albedo = Color(0.72549, 0.72549, 0.72549, 1)
+volumetric_fog_albedo = Color(0.45098, 0.45098, 0.45098, 1)
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_vttlu"]
 
@@ -228,11 +231,21 @@ item_data = ExtResource("5_5o2br")
 script = ExtResource("6_lwdl8")
 item_data = ExtResource("5_5o2br")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_42cft"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wpjfh"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_aygk6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iuhy2"]
+
 [node name="MainScene" type="Node3D"]
 script = ExtResource("1_b25ig")
 
 [node name="Player" parent="." instance=ExtResource("1_8etef")]
 transform = Transform3D(-0.621685, 0, -0.0133339, 0, 0.895269, 0, 0.00978796, 0, -0.846906, 0.534462, 1.03655, -12.2167)
+collision_layer = 18
+collision_mask = 17
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.754925, -0.38015, -0.534391, 0.542947, 0.819323, 0.18417, 0.367827, -0.429181, 0.824929, 0, 17.9553, 0)
@@ -2950,4 +2963,165 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.737, 5.22736)
 [node name="TTT_Button9" parent="TTT" instance=ExtResource("39_gy1v5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0.737, 5.22736)
 
+[node name="Lava" type="Sprite3D" parent="."]
+transform = Transform3D(-16.7327, 0, 0, 0, -8.18249e-07, 1, 0, -18.7194, -4.37114e-08, 0, -11.8877, 0)
+texture = ExtResource("40_gk40v")
+
+[node name="Area3D" type="Area3D" parent="Lava"]
+transform = Transform3D(4.0563, 0, 0, 0, 4.05629, -1.33227e-15, 0, -9.09495e-13, 1, 0, 4.79209e-09, -2.05221)
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("42_tj6ka")
+goTo = "res://Menus/Death_Menu.tscn"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lava/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, -5.55112e-17, 0, -2.27374e-13, 1, 0, -8.70867e-10, 1.51279)
+shape = SubResource("BoxShape3D_42cft")
+
+[node name="Parkour" type="Node3D" parent="."]
+
+[node name="Cube" type="StaticBody3D" parent="Parkour"]
+transform = Transform3D(11.6852, 0, 0, 0, 1, 0, 0, 0, 11.6852, 12.4091, -11.8509, 18.5001)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour/Cube"]
+shape = SubResource("BoxShape3D_wpjfh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour/Cube"]
+material_override = ExtResource("42_umw8w")
+mesh = SubResource("BoxMesh_aygk6")
+
+[node name="Cube2" type="StaticBody3D" parent="Parkour"]
+transform = Transform3D(6.51998, 0, 0, 0, 1, 0, 0, 0, 6.51998, -0.329092, -11.8509, 19.2008)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour/Cube2"]
+shape = SubResource("BoxShape3D_wpjfh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour/Cube2"]
+material_override = ExtResource("42_umw8w")
+mesh = SubResource("BoxMesh_aygk6")
+
+[node name="Cube3" type="StaticBody3D" parent="Parkour"]
+transform = Transform3D(6.51998, 0, 0, 0, 1, 0, 0, 0, 6.51998, -17.5406, -11.8509, 12.5114)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour/Cube3"]
+shape = SubResource("BoxShape3D_wpjfh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour/Cube3"]
+material_override = ExtResource("42_umw8w")
+mesh = SubResource("BoxMesh_aygk6")
+
+[node name="Cube4" type="StaticBody3D" parent="Parkour"]
+transform = Transform3D(6.51998, 0, 0, 0, 1, 0, 0, 0, 6.51998, -17.608, -11.8509, -2.58173)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour/Cube4"]
+shape = SubResource("BoxShape3D_wpjfh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour/Cube4"]
+material_override = ExtResource("42_umw8w")
+mesh = SubResource("BoxMesh_aygk6")
+
+[node name="Cube5" type="StaticBody3D" parent="Parkour"]
+transform = Transform3D(6.51998, 0, 0, 0, 1, 0, 0, 0, 6.51998, -3.90402, -11.8509, -30.5899)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour/Cube5"]
+shape = SubResource("BoxShape3D_wpjfh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour/Cube5"]
+material_override = ExtResource("42_umw8w")
+mesh = SubResource("BoxMesh_aygk6")
+
+[node name="Cube6" type="StaticBody3D" parent="Parkour"]
+transform = Transform3D(2.32776, 0, 0, 0, 1, 0, 0, 0, 2.32776, -9.11673, -11.8509, 16.8478)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour/Cube6"]
+shape = SubResource("BoxShape3D_wpjfh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour/Cube6"]
+material_override = ExtResource("42_umw8w")
+mesh = SubResource("BoxMesh_aygk6")
+
+[node name="Cube7" type="StaticBody3D" parent="Parkour"]
+transform = Transform3D(2.32776, 0, 0, 0, 1, 0, 0, 0, 2.32776, -19.9373, -11.8509, 5.89721)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour/Cube7"]
+shape = SubResource("BoxShape3D_wpjfh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour/Cube7"]
+material_override = ExtResource("42_umw8w")
+mesh = SubResource("BoxMesh_aygk6")
+
+[node name="Cube8" type="StaticBody3D" parent="Parkour"]
+transform = Transform3D(2.32776, 0, 0, 0, 1, 0, 0, 0, 2.32776, -14.7121, -11.8509, 3.72011)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour/Cube8"]
+shape = SubResource("BoxShape3D_wpjfh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour/Cube8"]
+material_override = ExtResource("42_umw8w")
+mesh = SubResource("BoxMesh_aygk6")
+
+[node name="Cube9" type="StaticBody3D" parent="Parkour"]
+transform = Transform3D(2.32776, 0, 0, 0, 1, 0, 0, 0, 2.32776, -17.4063, -11.8509, -10.829)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour/Cube9"]
+shape = SubResource("BoxShape3D_wpjfh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour/Cube9"]
+material_override = ExtResource("42_umw8w")
+mesh = SubResource("BoxMesh_aygk6")
+
+[node name="Cube10" type="StaticBody3D" parent="Parkour"]
+transform = Transform3D(2.32776, 0, 0, 0, 1, 0, 0, 0, 2.32776, -12.1811, -11.8509, -13.0061)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour/Cube10"]
+shape = SubResource("BoxShape3D_wpjfh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour/Cube10"]
+material_override = ExtResource("42_umw8w")
+mesh = SubResource("BoxMesh_aygk6")
+
+[node name="Cube11" type="StaticBody3D" parent="Parkour"]
+transform = Transform3D(2.32776, 0, 0, 0, 1, 0, 0, 0, 2.32776, -9.64197, -11.8509, -19.0883)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour/Cube11"]
+shape = SubResource("BoxShape3D_wpjfh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour/Cube11"]
+material_override = ExtResource("42_umw8w")
+mesh = SubResource("BoxMesh_aygk6")
+
+[node name="Cube12" type="StaticBody3D" parent="Parkour"]
+transform = Transform3D(2.32776, 0, 0, 0, 1, 0, 0, 0, 2.32776, -4.41676, -11.8509, -22.766)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour/Cube12"]
+shape = SubResource("BoxShape3D_wpjfh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Parkour/Cube12"]
+material_override = ExtResource("42_umw8w")
+mesh = SubResource("BoxMesh_aygk6")
+
+[node name="low-poly_exit_light_ceiling_sign_light" parent="Parkour" instance=ExtResource("23_02nor")]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, -25.4355, -5.54953, -2.06784)
+
+[node name="low-poly_exit_light_ceiling_sign_light2" parent="Parkour" instance=ExtResource("23_02nor")]
+transform = Transform3D(-5.46392e-09, 0, 0.125, 0, 0.125, 0, -0.125, 0, -5.46392e-09, 13.3364, -5.54953, 28.1436)
+
+[node name="low-poly_exit_light_ceiling_sign_light4" parent="Parkour" instance=ExtResource("23_02nor")]
+transform = Transform3D(-5.46392e-09, 0, -0.1, 0, 0.125, 0, -0.125, 0, 4.37114e-09, -9.74658, -5.54953, -31.9963)
+
+[node name="low-poly_exit_light_ceiling_sign_light3" parent="Parkour" instance=ExtResource("23_02nor")]
+transform = Transform3D(-5.46392e-09, 0, 0.125, 0, 0.125, 0, -0.125, 0, -5.46392e-09, 1.31871, -5.54953, -31.9963)
+
+[node name="Win" type="Area3D" parent="Parkour"]
+transform = Transform3D(6.06685, 0, 0, 0, 1, 0, 0, 0, 6.06685, -3.99703, -10.5019, -30.2869)
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("42_tj6ka")
+goTo = "res://Menus/Ending_3.tscn"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Parkour/Win"]
+shape = SubResource("BoxShape3D_iuhy2")
+
 [connection signal="timeout" from="UI/Time_Control/Timer" to="UI/Time_Control" method="_on_timer_timeout"]
+[connection signal="body_entered" from="Lava/Area3D" to="Lava/Area3D" method="_on_body_entered"]
+[connection signal="body_entered" from="Parkour/Win" to="Parkour/Win" method="_on_body_entered"]

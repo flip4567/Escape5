@@ -1,3 +1,5 @@
+NoiseTexture2D
+NoiseTexture3D
 StandardMaterial3D
 ItemData
 ShaderMaterial

@@ -3,12 +3,12 @@ res://assets/simple_fpsplayer/Player.gd
 res://inventory/TestInv.tres
 res://BackRooms/DunCell/imports/Walls/BackRoomsWall.tres
 res://BackRooms/DungeonTiles.tres
+res://TicTacToe/Lava_Texture.tres
+res://Lava.gd
 res://Menus/Death_Menu.tscn
 res://Menus/Start_Menu.tscn
-res://Menus/3D_Button.gd
-res://3D models/Marker/pick_up_marker.gd
 res://TicTacToe/TTTTest.tscn
 res://Menus/Ending_2.tscn
-res://TicTacToe/TTT.gd
 res://Menus/Ending_1.tscn
-res://Menus/Scene_Change.gd
+res://Area_Transition.gd
+res://Menus/Ending_3.tscn
