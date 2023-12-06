@@ -14,8 +14,8 @@ script = ExtResource("1_qro11")
 [node name="Sketchfab_model" parent="." instance=ExtResource("1_0syh0")]
 
 [node name="Area3D" type="Area3D" parent="."]
-collision_layer = 4
-collision_mask = 4
+collision_layer = 256
+collision_mask = 256
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(3.25904, 1.25823, 1.03211, -0.96561, -0.14144, 4.06315, 1.80997, -2.34103, 0.309243, 156.331, 19.1038, -257.143)

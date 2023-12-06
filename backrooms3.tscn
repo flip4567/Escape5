@@ -1,4 +1,4 @@
-[gd_scene load_steps=126 format=3 uid="uid://by701be8jxwnv"]
+[gd_scene load_steps=124 format=3 uid="uid://by701be8jxwnv"]
 
 [ext_resource type="Texture2D" uid="uid://cnwn6lsn0hiph" path="res://BackRooms/DunCell/MetalWall.jpg" id="1_qltwv"]
 [ext_resource type="PackedScene" uid="uid://yij7w6mi28tx" path="res://BackRooms/DunCell/imports/Walls/wall_right.tscn" id="2_kyxk7"]
@@ -34,7 +34,6 @@
 [ext_resource type="PackedScene" uid="uid://c3a7e3e8qe6p8" path="res://3D models/Skelly/browning_hi_power.tscn" id="32_aggs4"]
 [ext_resource type="Script" path="res://KeyHoles.gd" id="33_ab5nf"]
 [ext_resource type="PackedScene" uid="uid://8hkc5lqjo81c" path="res://3D models/key/KeyHole/key_hole.tscn" id="34_1fdui"]
-[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="35_pn5t1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_spijc"]
 albedo_texture = ExtResource("1_qltwv")
@@ -336,9 +335,6 @@ item_data = ExtResource("19_we4kf")
 [sub_resource type="Resource" id="Resource_s5cm1"]
 script = ExtResource("15_mv6lm")
 item_data = ExtResource("19_we4kf")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_qu3a0"]
-size = Vector3(1, 0.351135, 1)
 
 [node name="Backrooms" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -26.4052, 0)
@@ -948,61 +944,64 @@ spot_attenuation = 1.93187
 spot_angle = 92.85
 spot_angle_attenuation = 0.554785
 
-[node name="Notes" type="Node" parent="."]
+[node name="Notes" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -63.845, 0)
 
 [node name="Note1" parent="Notes" groups=["Note1"] instance=ExtResource("12_wrjxt")]
-transform = Transform3D(0.00163593, 0, -0.692892, 0, 1, 0, 0.808019, 0, 0.00140284, -39.4356, -63.9561, 17.253)
+transform = Transform3D(0.00163592, 0, -0.692892, 0, 1, 0, 0.808019, 0, 0.00140284, -39.4356, 26.41, 17.253)
 gravity_scale = 0.0
 script = ExtResource("13_uuwgy")
 slot_data = SubResource("Resource_rt0hr")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Notes/Note1"]
-transform = Transform3D(0.00202461, 0, 0.999998, 0, 1, 0, -0.999998, 0, 0.00202461, 0.0261517, 0.01577, 0.0271187)
+transform = Transform3D(0.00202461, 0, 0.999998, 0, 1, 0, -0.999998, 0, 0.00202461, 0.0261688, 0.0182114, 0.0271454)
 shape = SubResource("BoxShape3D_uy8ni")
 
 [node name="Note2" parent="Notes" groups=["Note2"] instance=ExtResource("12_wrjxt")]
-transform = Transform3D(0.00163593, 0, -0.692892, 0, 1, 0, 0.808019, 0, 0.00140284, -38.252, -63.9561, 11.6417)
+transform = Transform3D(0.00163592, 0, -0.692892, 0, 1, 0, 0.808019, 0, 0.00140284, -38.252, 26.41, 11.6417)
 gravity_scale = 0.0
 script = ExtResource("16_fqowx")
 slot_data = SubResource("Resource_j7w0q")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Notes/Note2"]
-transform = Transform3D(0.00202461, 0, 0.999998, 0, 1, 0, -0.999998, 0, 0.00202461, 0.0261517, 0.01577, 0.0271187)
+transform = Transform3D(0.00202461, 0, 0.999998, 0, 1, 0, -0.999998, 0, 0.00202461, 0.0261507, 0.0182114, 0.0271187)
 shape = SubResource("BoxShape3D_uy8ni")
 
-[node name="Keys" type="Node" parent="."]
+[node name="Keys" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -63.845, 0)
 
 [node name="Key1" parent="Keys" groups=["Key1"] instance=ExtResource("18_hoxg5")]
-transform = Transform3D(0.482961, 0, -0.875642, 0, 1, 0, 0.875642, 0, 0.482961, -38.2449, -63.9744, 16.7212)
+transform = Transform3D(0.482961, 0, -0.875642, 0, 1, 0, 0.875642, 0, 0.482961, -38.2449, 26.41, 16.7212)
 lock_rotation = true
 slot_data = SubResource("Resource_i48du")
 
 [node name="Key2" parent="Keys" groups=["Key2"] instance=ExtResource("20_8ypc1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.8391, -64.0869, 4.81892)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.8391, 26.41, 4.81892)
 script = ExtResource("21_vqbep")
 slot_data = SubResource("Resource_45u73")
 
 [node name="Key3" parent="Keys" groups=["Key3"] instance=ExtResource("22_cc4k0")]
-transform = Transform3D(0.733659, 0, -0.679518, 0, 1, 0, 0.679518, 0, 0.733659, -92.8507, -63.9203, 41.1053)
+transform = Transform3D(0.733659, 0, -0.679518, 0, 1, 0, 0.679518, 0, 0.733659, -92.8507, 26.41, 41.1053)
 script = ExtResource("23_cfmgb")
 slot_data = SubResource("Resource_8ffel")
 
 [node name="Key4" parent="Keys" groups=["Key4"] instance=ExtResource("24_cavhq")]
-transform = Transform3D(0.854894, 0, 0.518803, 0, 1, 0, -0.518803, 0, 0.854894, -96.5962, -63.3612, 58.556)
+transform = Transform3D(0.854894, 0, 0.518803, 0, 1, 0, -0.518803, 0, 0.854894, -96.5962, 26.41, 58.556)
 script = ExtResource("25_1ikji")
 slot_data = SubResource("Resource_0asev")
 
 [node name="Key5" parent="Keys" groups=["Key5"] instance=ExtResource("26_h36b4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.6501, -63.9725, 10.6613)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.6501, 26.41, 10.6613)
 script = ExtResource("27_toblk")
 slot_data = SubResource("Resource_efpqt")
 
 [node name="Key6" parent="Keys" groups=["Key6"] instance=ExtResource("28_qbbjh")]
-transform = Transform3D(0.576033, 0, -0.817427, 0, 1, 0, 0.817427, 0, 0.576033, -58.2311, -63.9647, 61.6785)
+transform = Transform3D(0.576033, 0, -0.817427, 0, 1, 0, 0.817427, 0, 0.576033, -58.2311, 26.41, 61.6785)
 script = ExtResource("29_co7ik")
 slot_data = SubResource("Resource_s5cm1")
 
-[node name="Skulls" type="Node" parent="."]
+[node name="Skulls" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26.41, 0)
 
 [node name="human_skull" parent="Skulls" instance=ExtResource("30_ui1t7")]
 transform = Transform3D(0.0119314, -0.154505, -0.00328063, -0.148976, -0.0123742, 0.0409622, -0.0410934, 0, -0.149453, -39.5001, -64.0132, 16.4287)
@@ -3176,7 +3175,8 @@ transform = Transform3D(-2.09314, 1.3999, -0.244887, -0.293993, -1.61244e-07, 2.
 [node name="browning_hi-power" parent="Skelly" instance=ExtResource("32_aggs4")]
 transform = Transform3D(-0.0165348, -0.128057, -0.0597928, -5.31864e-09, 0.0602007, -0.12893, 0.141329, -0.0149821, -0.00699548, -0.121761, -0.296944, -0.0900536)
 
-[node name="KeyHoles" type="Node" parent="."]
+[node name="KeyHoles" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26.41, 0)
 script = ExtResource("33_ab5nf")
 
 [node name="KeyHole" parent="KeyHoles" instance=ExtResource("34_1fdui")]
@@ -3199,17 +3199,6 @@ transform = Transform3D(1.40598e-08, 0.321651, 7.13275, 7.14, -3.12099e-07, 0, 3
 
 [node name="WallHide" parent="KeyHoles" instance=ExtResource("4_3ytne")]
 transform = Transform3D(-4.36641e-08, 0, 1, 0, 1, 0, -0.998921, 0, -4.37114e-08, -94.023, -64.2858, 15.0544)
-
-[node name="Player" parent="." instance=ExtResource("35_pn5t1")]
-transform = Transform3D(-0.621685, 0, -0.0133339, 0, 0.895269, 0, 0.00978796, 0, -0.846906, -39.0714, -36.8327, 4.77225)
-collision_layer = 18
-collision_mask = 17
-
-[node name="Area3D" type="Area3D" parent="Player"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/Area3D"]
-transform = Transform3D(1, 0, -1.86265e-09, 0, 1, 0, 2.79397e-09, 0, 1, 0, -0.712532, 0)
-shape = SubResource("BoxShape3D_qu3a0")
 
 [connection signal="area_entered" from="EscapeWin/Platform/MeshInstance3D22/Area3D2" to="EscapeWin/Platform/MeshInstance3D22" method="_on_area_3d_2_area_entered"]
 [connection signal="area_entered" from="EscapeWin/Platform/MeshInstance3D23/StaticBody3D/Area3D" to="EscapeWin/Platform/MeshInstance3D22" method="_on_area_3d_area_entered"]
