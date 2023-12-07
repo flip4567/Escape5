@@ -1,9 +1,11 @@
-res://backrooms3.tscn
+res://Menus/Ending_C.tscn
 res://assets/simple_fpsplayer/Player.gd
 res://inventory/TestInv.tres
 res://BackRooms/DunCell/imports/Walls/BackRoomsWall.tres
 res://BackRooms/DungeonTiles.tres
 res://TicTacToe/Lava_Texture.tres
+res://Area_Transition.gd
+res://BackRooms/BackrromsWin.gd
 res://MainScene.tscn
 res://Menus/Death_Menu.tscn
 res://Menus/Start_Menu.tscn
@@ -11,4 +13,13 @@ res://TicTacToe/TTTTest.tscn
 res://Menus/Ending_2.tscn
 res://Menus/Ending_1.tscn
 res://Menus/Ending_3.tscn
+res://backrooms3.tscn
+res://3D models/key/KeyHole/key_hole.tscn
 res://3D models/key/key.tscn
+res://Menus/Ending_4.tscn
+res://Menus/Ending_5.tscn
+res://BackRooms/dun_gen.tscn
+res://CloseElv.gd
+res://3D models/Monster/monster_2.tscn
+res://BackRooms/Tele.gd
+res://3D models/key/Tele.gd

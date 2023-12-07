@@ -1,6 +1,7 @@
-Node3D
 CollisionShape3D
 Area3D
+Marker3D
+Node3D
 MeshInstance3D
 StaticBody3D
 SpotLight3D
@@ -29,4 +30,3 @@ CanvasLayer
 GridContainer
 MarginContainer
 PanelContainer
-TextureRect

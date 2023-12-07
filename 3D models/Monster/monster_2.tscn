@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq0qfpgjrkhis"]
+
+[ext_resource type="PackedScene" uid="uid://8qnywr4upbv5" path="res://3D models/Monster/Monster1.glb" id="1_cf57o"]
+
+[node name="Monster1" instance=ExtResource("1_cf57o")]
+
+[node name="Skeleton3D" parent="metarig" index="0"]
+bones/9/rotation = Quaternion(0.223475, 1.65448, -1.07553, 0.640475)
+bones/18/rotation = Quaternion(0.223475, -1.66453, 1.29648, 0.640475)
