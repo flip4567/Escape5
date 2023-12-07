@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bl6cyvuysewfo"]
+[gd_scene load_steps=40 format=3 uid="uid://bl6cyvuysewfo"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_8etef"]
 [ext_resource type="Script" path="res://MainScene.gd" id="1_b25ig"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://d108xt76uvefx" path="res://inventory/inventory.tscn" id="5_gwghl"]
 [ext_resource type="Script" path="res://inventory/Inventory_Interface.gd" id="6_b0e5n"]
 [ext_resource type="PackedScene" uid="uid://b7t254g1xu2ab" path="res://inventory/slot.tscn" id="8_qixa7"]
+[ext_resource type="Script" path="res://Monster/monster_animations.gd" id="10_xkpr5"]
 [ext_resource type="Script" path="res://Time_Control.gd" id="11_utoby"]
 [ext_resource type="PackedScene" uid="uid://df7p0utdbxi0c" path="res://3D models/MainRoom/room_prototype_v_3.tscn" id="16_12ano"]
 [ext_resource type="PackedScene" uid="uid://k8ci5dixb7cv" path="res://3D models/Monster/monster_1.tscn" id="17_4h4bk"]
@@ -17,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bsys3d3ay5d5b" path="res://3D models/key/key.tscn" id="21_oo0gp"]
 [ext_resource type="Script" path="res://3D models/key/Tele.gd" id="22_svss1"]
 [ext_resource type="PackedScene" uid="uid://3aw5ksbr60d0" path="res://3D models/Light/exit light/low_poly_exit_light_ceiling_sign_light.tscn" id="23_02nor"]
+[ext_resource type="AudioStream" uid="uid://cejhlca61f7fw" path="res://Music/7-Dark Fantasy Studio- The forest (seamless).mp3" id="24_rap4u"]
 [ext_resource type="Script" path="res://TicTacToe/TTT.gd" id="38_13e4o"]
 [ext_resource type="PackedScene" uid="uid://bnv82oo1mqpgb" path="res://TicTacToe/TTT_Button.tscn" id="39_gy1v5"]
 [ext_resource type="Texture2D" uid="uid://bv2iyfd0nvvs8" path="res://TicTacToe/Lava_Texture.tres" id="40_gk40v"]
@@ -61,11 +63,19 @@ albedo_texture = ExtResource("17_i2d2l")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w4h7q"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2yeys"]
+albedo_color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6alx3"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_krosa"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
 [node name="MainScene" type="Node3D"]
 script = ExtResource("1_b25ig")
 
 [node name="Player" parent="." instance=ExtResource("1_8etef")]
-transform = Transform3D(0.621678, 0, -0.0139399, 0, 0.895269, 0, 0.0102328, 0, 0.846896, 2.19062, 1.45322, -21.1183)
+transform = Transform3D(-0.621729, 0, 0.00879575, 0, 0.895269, 0, -0.00645665, 0, -0.846965, 9.7765, 1.45322, 5.66593)
 collision_layer = 18
 collision_mask = 17
 
@@ -132,7 +142,8 @@ transform = Transform3D(0.245, 0, 0, 0, 0.245, 0, 0, 0, 0.245, 4.29131, 1.88338,
 visible = false
 
 [node name="Monster1" parent="." instance=ExtResource("17_4h4bk")]
-transform = Transform3D(0.0133152, 0, -0.294699, 0, 0.295, 0, 0.294699, 0, 0.0133152, -11.5823, -8.63326, 53.3989)
+transform = Transform3D(0.0133152, 0, -0.294699, 0, 0.295, 0, 0.294699, 0, 0.0133152, -48.594, 0.129986, -7.10317)
+script = ExtResource("10_xkpr5")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_phjx8")
@@ -364,6 +375,33 @@ script = ExtResource("22_svss1")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="key/Area3D2"]
 transform = Transform3D(659.045, 0, 0, 0, 659.045, -5.45697e-12, 0, 5.45697e-12, 659.045, 0, 471.823, 102.093)
 shape = SubResource("BoxShape3D_w4h7q")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.74993, 0, 0, 0, 1.31134e-07, 3.46226, 0, -1, 4.5402e-07, 9.61518, 2.93639, 11.97)
+material_override = SubResource("StandardMaterial3D_2yeys")
+mesh = SubResource("PlaneMesh_6alx3")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_krosa")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.2762, 8.74228e-08, 0, 1.6341e-14, 4.37114e-08, 3.46226, 3.73838e-07, 1, -1.5134e-07, 1.57311, 2.93639, -27.5145)
+material_override = SubResource("StandardMaterial3D_2yeys")
+mesh = SubResource("PlaneMesh_6alx3")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_krosa")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78079, 5.27097, -3.56553)
+stream = ExtResource("24_rap4u")
+autoplay = true
 
 [connection signal="timeout" from="UI/Time_Control/Timer" to="UI/Time_Control" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Lava/Area3D" to="Lava/Area3D" method="_on_body_entered"]

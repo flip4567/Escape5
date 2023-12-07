@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1701959837
+::res://::1701979210
 Area_Transition.gd::GDScript::-1::1701957813::0::1::::<>Area3D<>::
-backrooms3.tscn::PackedScene::4138577434811373711::1701959886::0::1::::<><>::uid://cnwn6lsn0hiph::::res://BackRooms/DunCell/MetalWall.jpg<>uid://yij7w6mi28tx::::res://BackRooms/DunCell/imports/Walls/wall_right.tscn<>uid://l2pw2hqks7i5::::res://BackRooms/DunCell/Elevator.jpg<>uid://cm6fl4k1lr1wl::::res://BackRooms/DunCell/imports/Walls/wall_up.tscn<>res://CloseElv.gd<>uid://btacc0qi5t2g5::::res://Music/awdadwawd.mp3<>uid://b1rrmt0kf3lqy::::res://BackRooms/dun_gen.tscn<>res://MusicPlayer.gd<>uid://bjunxvfhcth6g::::res://Music/5-Dark Fantasy Studio- Ashes (seamless).wav<>uid://3aw5ksbr60d0::::res://3D models/Light/exit light/low_poly_exit_light_ceiling_sign_light.tscn<>uid://cfn68crsq071c::::res://3D models/Light/outdor_ceiling_light.tscn<>uid://cfdwjqnf3or0h::::res://inventory/item/Note1.tscn<>res://3D models/Note/pick_up_note1.gd<>uid://bbc7rnjg575xh::::res://3D models/Note/Note1.tres<>res://inventory/slot_data.gd<>res://inventory/item/pick_up_note2.gd<>uid://cgd4qk2khvrhg::::res://3D models/Note/Note2.tres<>uid://pqxaeubbyd1f::::res://inventory/item/Key1.tscn<>uid://cpxn5cqryvnkt::::res://3D models/key/Key.tres<>uid://diog1vy8xkxyi::::res://inventory/item/Key2.tscn<>res://3D models/key/pick_up_key2.gd<>uid://doa1i0autnwf2::::res://inventory/item/Key3.tscn<>res://3D models/key/pick_up_key3.gd<>uid://cll4mjk1gkeus::::res://inventory/item/Key5.tscn<>res://3D models/key/pick_up_key4.gd<>uid://b4w2kfocy7jm5::::res://inventory/item/Key4.tscn<>res://3D models/key/pick_up_key5.gd<>uid://dtnl15cd8x3r::::res://inventory/item/Key6.tscn<>res://3D models/key/pick_up_key6.gd<>uid://ikqjdsoq8hud::::res://3D models/Skull/human_skull.tscn<>uid://bj4k5cbk8x6mh::::res://3D models/Skelly/skelly.tscn<>uid://c3a7e3e8qe6p8::::res://3D models/Skelly/browning_hi_power.tscn<>res://KeyHoles.gd<>uid://8hkc5lqjo81c::::res://3D models/key/KeyHole/key_hole.tscn
+backrooms3.tscn::PackedScene::4138577434811373711::1701975193::0::1::::<><>::uid://cnwn6lsn0hiph::::res://BackRooms/DunCell/MetalWall.jpg<>uid://yij7w6mi28tx::::res://BackRooms/DunCell/imports/Walls/wall_right.tscn<>uid://l2pw2hqks7i5::::res://BackRooms/DunCell/Elevator.jpg<>uid://cm6fl4k1lr1wl::::res://BackRooms/DunCell/imports/Walls/wall_up.tscn<>res://CloseElv.gd<>uid://btacc0qi5t2g5::::res://Music/awdadwawd.mp3<>uid://b1rrmt0kf3lqy::::res://BackRooms/dun_gen.tscn<>res://MusicPlayer.gd<>uid://bjunxvfhcth6g::::res://Music/5-Dark Fantasy Studio- Ashes (seamless).wav<>uid://3aw5ksbr60d0::::res://3D models/Light/exit light/low_poly_exit_light_ceiling_sign_light.tscn<>uid://cfn68crsq071c::::res://3D models/Light/outdor_ceiling_light.tscn<>uid://cfdwjqnf3or0h::::res://inventory/item/Note1.tscn<>res://3D models/Note/pick_up_note1.gd<>uid://bbc7rnjg575xh::::res://3D models/Note/Note1.tres<>res://inventory/slot_data.gd<>res://inventory/item/pick_up_note2.gd<>uid://cgd4qk2khvrhg::::res://3D models/Note/Note2.tres<>uid://pqxaeubbyd1f::::res://inventory/item/Key1.tscn<>uid://cpxn5cqryvnkt::::res://3D models/key/Key.tres<>uid://diog1vy8xkxyi::::res://inventory/item/Key2.tscn<>res://3D models/key/pick_up_key2.gd<>uid://doa1i0autnwf2::::res://inventory/item/Key3.tscn<>res://3D models/key/pick_up_key3.gd<>uid://cll4mjk1gkeus::::res://inventory/item/Key5.tscn<>res://3D models/key/pick_up_key4.gd<>uid://b4w2kfocy7jm5::::res://inventory/item/Key4.tscn<>res://3D models/key/pick_up_key5.gd<>uid://dtnl15cd8x3r::::res://inventory/item/Key6.tscn<>res://3D models/key/pick_up_key6.gd<>uid://ikqjdsoq8hud::::res://3D models/Skull/human_skull.tscn<>uid://bj4k5cbk8x6mh::::res://3D models/Skelly/skelly.tscn<>uid://c3a7e3e8qe6p8::::res://3D models/Skelly/browning_hi_power.tscn<>res://KeyHoles.gd<>uid://8hkc5lqjo81c::::res://3D models/key/KeyHole/key_hole.tscn
 backrooms_scene.tscn::PackedScene::8787810131321284467::1701876676::0::1::::<><>::uid://b1rrmt0kf3lqy
 CloseElv.gd::GDScript::-1::1701959815::0::1::::<>Area3D<>::
 door.gd::GDScript::-1::1701876676::0::1::::<>MeshInstance3D<>::
@@ -10,24 +10,24 @@ KeyHoles.gd::GDScript::-1::1701876675::0::1::::<>Node<>::
 Lava.gd::GDScript::-1::1701876675::0::1::::<>Sprite3D<>::
 LavaTexture.png::CompressedTexture2D::4800665826963165798::1701876675::1701876675::1::::<><>::
 MainScene.gd::GDScript::-1::1701876675::0::1::::<>Node3D<>::
-MainScene.tscn::PackedScene::3222659102127689168::1701959837::0::1::::<><>::uid://dgpjxoygnvyy4::::res://assets/simple_fpsplayer/Player.tscn<>res://MainScene.gd<>uid://b7e2qyits6cm7::::res://3D models/keypad/Keypa.tscn<>uid://c220l0xmp61r4::::res://3D models/Marker/marker_pickup.tscn<>uid://d108xt76uvefx::::res://inventory/inventory.tscn<>res://inventory/Inventory_Interface.gd<>uid://b7t254g1xu2ab::::res://inventory/slot.tscn<>res://Time_Control.gd<>uid://df7p0utdbxi0c::::res://3D models/MainRoom/room_prototype_v_3.tscn<>uid://k8ci5dixb7cv::::res://3D models/Monster/monster_1.tscn<>uid://jlr5wtsicd27::::res://3D models/MainRoom/RoomTexture.png<>uid://by701be8jxwnv::::res://backrooms3.tscn<>res://BackRooms/BackrromsWin.gd<>uid://3aw5ksbr60d0::::res://3D models/Light/exit light/low_poly_exit_light_ceiling_sign_light.tscn<>res://TicTacToe/TTT.gd<>uid://bnv82oo1mqpgb::::res://TicTacToe/TTT_Button.tscn<>uid://bv2iyfd0nvvs8::::res://TicTacToe/Lava_Texture.tres<>res://Area_Transition.gd<>uid://dogt7gmvynypt::::res://BackRooms/DunCell/imports/ceiling.tres
+MainScene.tscn::PackedScene::3222659102127689168::1701975192::0::1::::<><>::uid://dgpjxoygnvyy4::::res://assets/simple_fpsplayer/Player.tscn<>res://MainScene.gd<>uid://b7e2qyits6cm7::::res://3D models/keypad/Keypa.tscn<>uid://c220l0xmp61r4::::res://3D models/Marker/marker_pickup.tscn<>uid://d108xt76uvefx::::res://inventory/inventory.tscn<>res://inventory/Inventory_Interface.gd<>uid://b7t254g1xu2ab::::res://inventory/slot.tscn<>res://Monster/monster_animations.gd<>res://Time_Control.gd<>uid://df7p0utdbxi0c::::res://3D models/MainRoom/room_prototype_v_3.tscn<>uid://k8ci5dixb7cv::::res://3D models/Monster/monster_1.tscn<>uid://jlr5wtsicd27::::res://3D models/MainRoom/RoomTexture.png<>uid://by701be8jxwnv::::res://backrooms3.tscn<>res://BackRooms/BackrromsWin.gd<>uid://bq0qfpgjrkhis::::res://3D models/Monster/monster_2.tscn<>uid://bsys3d3ay5d5b::::res://3D models/key/key.tscn<>res://3D models/key/Tele.gd<>uid://3aw5ksbr60d0::::res://3D models/Light/exit light/low_poly_exit_light_ceiling_sign_light.tscn<>uid://cejhlca61f7fw::::res://Music/7-Dark Fantasy Studio- The forest (seamless).mp3<>res://TicTacToe/TTT.gd<>uid://bnv82oo1mqpgb::::res://TicTacToe/TTT_Button.tscn<>uid://bv2iyfd0nvvs8::::res://TicTacToe/Lava_Texture.tres<>res://Area_Transition.gd<>uid://dogt7gmvynypt::::res://BackRooms/DunCell/imports/ceiling.tres
 MusicPlayer.gd::GDScript::-1::1701876676::0::1::::<>Area3D<>::
 Skin.png::CompressedTexture2D::8262588740017597549::1701876676::1701876676::1::::<><>::
 Tele.gd::GDScript::-1::1701876676::0::1::::<>Node3D<>::
 the_backrooms_wallpaper_texture_1.png::CompressedTexture2D::8500851329520962612::1701876676::1701876676::1::::<><>::
-Time_Control.gd::GDScript::-1::1701876676::0::1::::<>Node<>::
-::res://3D models/::1701876675
+Time_Control.gd::GDScript::-1::1701973505::0::1::::<>Node<>::
+::res://3D models/::1701978830
 ::res://3D models/hammer/::1701876675
 hammer.glb::PackedScene::7128526621309205935::1701876675::1701876675::1::::<><>::
 hammer_bake1024_color.png::CompressedTexture2D::1114979382406750651::1701876675::1701876675::1::::<><>::
 hammer_bake1024_normal.png::CompressedTexture2D::6349396008817502623::1701876675::1701876675::1::::<><>::
 hammer_bake1024_orm.png::CompressedTexture2D::6706519918923948211::1701876675::1701876675::1::::<><>::
-::res://3D models/key/::1701959837
+::res://3D models/key/::1701975193
 BackroomsKey.tres::Resource/Resource::4615502564741331310::1701876675::0::1::::<><>::res://inventory/item/item_data.gd<>uid://cak06dsxc6v06
 key.gd::GDScript::-1::1701876675::0::1::::<>Node3D<>::
 key.glb::PackedScene::5265177935235315806::1701876675::1701876675::1::::<><>::
 Key.tres::Resource/Resource::5873997735592059619::1701876675::0::1::::<><>::res://inventory/item/item_data.gd<>uid://cak06dsxc6v06
-key.tscn::PackedScene::3700508044232081785::1701959837::0::1::::<><>::uid://cdbxt2sguhyss::::res://inventory/item/sketchfab_model.tscn<>res://3D models/key/key.gd
+key.tscn::PackedScene::3700508044232081785::1701975193::0::1::::<><>::uid://cdbxt2sguhyss::::res://inventory/item/sketchfab_model.tscn<>res://3D models/key/key.gd
 key_0.png::CompressedTexture2D::1818504841175746815::1701876675::1701876675::1::::<><>::
 pick_up_key1.gd::GDScript::-1::1701876675::0::1::::<>RigidBody3D<>::
 pick_up_key2.gd::GDScript::-1::1701876675::0::1::::<>RigidBody3D<>::
@@ -35,10 +35,11 @@ pick_up_key3.gd::GDScript::-1::1701876675::0::1::::<>RigidBody3D<>::
 pick_up_key4.gd::GDScript::-1::1701876675::0::1::::<>RigidBody3D<>::
 pick_up_key5.gd::GDScript::-1::1701876675::0::1::::<>RigidBody3D<>::
 pick_up_key6.gd::GDScript::-1::1701876675::0::1::::<>RigidBody3D<>::
-::res://3D models/key/KeyHole/::1701959837
+Tele.gd::GDScript::-1::1701971108::0::1::::<>Node3D<>::
+::res://3D models/key/KeyHole/::1701975193
 KeyHole.glb::PackedScene::1171635102325665067::1701876675::1701876675::1::::<><>::
 key_hole1.gd::GDScript::-1::1701876675::0::1::::<>Node3D<>::
-key_hole.tscn::PackedScene::2331294819281897530::1701959837::0::1::::<><>::uid://huc052xwvnuq::::res://BackRooms/DunCell/imports/DunCell_TexturesCom_MixedMedievalBricks_1K_albedo.png<>res://3D models/key/KeyHole/key_hole1.gd<>uid://canqjadcouag1::::res://LavaTexture.png
+key_hole.tscn::PackedScene::2331294819281897530::1701975193::0::1::::<><>::uid://huc052xwvnuq::::res://BackRooms/DunCell/imports/DunCell_TexturesCom_MixedMedievalBricks_1K_albedo.png<>res://3D models/key/KeyHole/key_hole1.gd<>uid://canqjadcouag1::::res://LavaTexture.png
 ::res://3D models/keypad/::1701876675
 Keypa.tscn::PackedScene::4642390396440936376::1701876675::0::1::::<><>::uid://b86r4goc5c1a0
 scene.gltf::PackedScene::4767732547922726961::1701876675::1701876675::1::::<><>::
@@ -70,6 +71,17 @@ RoomTexture.png::CompressedTexture2D::655494696424724178::1701876675::1701876675
 room_prototype.tscn::PackedScene::4141180554431736724::1701876675::0::1::::<><>::
 room_prototype_v_2.tscn::PackedScene::1153801930789281668::1701876675::0::1::::<><>::uid://ce8c480w61ovk
 room_prototype_v_3.tscn::PackedScene::7577222837095340764::1701876675::0::1::::<><>::uid://dpl5pe6m85j7s
+::res://3D models/marbles/::1701979073
+marbles2.tscn::PackedScene::8482248755712808600::1701979073::0::1::::<><>::uid://ymh6sgyuq5mw::::res://3D models/marbles/marbles_0.png<>uid://cegrekfpfhnkh::::res://3D models/marbles/marbles_1.png<>uid://b6uggfprrvq8d::::res://3D models/marbles/marbles_2.png<>uid://bvs2vsp2b8udh::::res://3D models/marbles/marbles_3.png<>uid://c0t44581sd4xi::::res://3D models/marbles/marbles_4.png<>uid://b24cnd58kfiy8::::res://3D models/marbles/marbles_5.png<>uid://dfqxdxxyv5m10::::res://3D models/marbles/marbles_6.png
+marbles.glb::PackedScene::3713487661004687360::1701976051::1701976063::1::::<><>::uid://ymh6sgyuq5mw
+marbles.tscn::PackedScene::4370531257852874496::1701976158::0::1::::<><>::uid://bs53umyd3kxfk
+marbles_0.png::CompressedTexture2D::1709786114728881510::1701976053::1701976064::1::::<><>::
+marbles_1.png::CompressedTexture2D::5067022874161366839::1701976054::1701976064::1::::<><>::
+marbles_2.png::CompressedTexture2D::4603937694858110525::1701976054::1701976064::1::::<><>::
+marbles_3.png::CompressedTexture2D::3899223029963336309::1701976055::1701976064::1::::<><>::
+marbles_4.png::CompressedTexture2D::6568599844362194242::1701976055::1701976064::1::::<><>::
+marbles_5.png::CompressedTexture2D::4341531271521127385::1701976055::1701976064::1::::<><>::
+marbles_6.png::CompressedTexture2D::7544639406237026877::1701976055::1701976064::1::::<><>::
 ::res://3D models/Marker/::1701876675
 BlueMarker.jpg::CompressedTexture2D::7676237034460101514::1701876675::1701876675::1::::<><>::
 marker.glb::PackedScene::6131704997364244503::1701876675::1701876675::1::::<><>::
@@ -80,10 +92,10 @@ marker_2.png::CompressedTexture2D::7131040403921267836::1701876675::1701876675::
 Marker_Equip.tscn::PackedScene::7462518816299550265::1701876675::0::1::::<><>::uid://ctmijx8pqxp1p
 marker_pickup.tscn::PackedScene::6725217262705580271::1701876675::0::1::::<><>::res://3D models/Marker/pick_up_marker.gd<>uid://cewebsbe5rqrj
 pick_up_marker.gd::GDScript::-1::1701876675::0::1::::<>RigidBody3D<>::
-::res://3D models/Monster/::1701876675
+::res://3D models/Monster/::1701975193
 Monster1.glb::PackedScene::2350095247200030340::1701876675::1701876675::1::::<><>::
-monster_1.tscn::PackedScene::770150203330281617::1701876675::0::1::::<><>::uid://8qnywr4upbv5
-monster_2.tscn::PackedScene::3562032824158018110::1701960082::0::1::::<><>::uid://8qnywr4upbv5::::res://3D models/Monster/Monster1.glb
+monster_1.tscn::PackedScene::770150203330281617::1701975193::0::1::::<><>::uid://8qnywr4upbv5::::res://3D models/Monster/Monster1.glb
+monster_2.tscn::PackedScene::3562032824158018110::1701975193::0::1::::<><>::uid://8qnywr4upbv5::::res://3D models/Monster/Monster1.glb
 ::res://3D models/Note/::1701876675
 folded_wrinkled_paper.glb::PackedScene::5713407648638342884::1701876675::1701876675::1::::<><>::
 folded_wrinkled_paper_0.png::CompressedTexture2D::5498497158385185192::1701876675::1701876675::1::::<><>::
@@ -114,19 +126,19 @@ pngimg.com - dot_PNG40.png::CompressedTexture2D::8602219238233654642::1701876676
 Black.png::CompressedTexture2D::798240598390187051::1701876676::1701876676::1::::<><>::
 Start_Button_0.png::CompressedTexture2D::7088643694803780259::1701876676::1701876676::1::::<><>::
 Start_Button_1.png::CompressedTexture2D::8330852464616279333::1701876676::1701876676::1::::<><>::
-::res://assets/simple_fpsplayer/::1701957813
-Player.gd::GDScript::-1::1701957813::0::1::::<>CharacterBody3D<>::
+::res://assets/simple_fpsplayer/::1701972791
+Player.gd::GDScript::-1::1701972791::0::1::::<>CharacterBody3D<>::
 Player.tscn::PackedScene::7611949078106151781::1701876676::0::1::::<><>::res://assets/simple_fpsplayer/Player.gd<>uid://leiq60yociyf
 Player_manager.gd::GDScript::-1::1701876676::0::1::::<>Node<>::
 README.md::TextFile::-1::1701876676::0::1::::<><>::
 simplefps-icon.png::CompressedTexture2D::4655847465857238927::1701876676::1701876676::1::::<><>::
-::res://BackRooms/::1701959839
+::res://BackRooms/::1701971020
 BackrromsWin.gd::GDScript::-1::1701958156::0::1::::<>Area3D<>::
 DungeonTiles.tres::MeshLibrary::4118881348185650637::1701957813::0::1::::<><>::
 dungeon_tiles.tscn::PackedScene::6719882264217884114::1701876675::0::1::::<><>::
 DunMesh.gd::GDScript::-1::1701876675::0::1::::<>Node3D<>::
 dun_gen.gd::GDScript::-1::1701876675::0::1::::<>Node3D<>::
-dun_gen.tscn::PackedScene::4247479695530760724::1701959839::0::1::::<><>::res://BackRooms/dun_gen.gd<>res://BackRooms/DunMesh.gd<>uid://bejt3pqbh5hhw::::res://BackRooms/DunCell/imports/dun_cell.tscn<>uid://cm6fl4k1lr1wl::::res://BackRooms/DunCell/imports/Walls/wall_up.tscn<>uid://b1jrbmimfw8od::::res://BackRooms/Floor.jpg
+dun_gen.tscn::PackedScene::4247479695530760724::1701959839::0::1::::<><>::res://BackRooms/dun_gen.gd<>res://BackRooms/DunMesh.gd<>uid://bejt3pqbh5hhw
 Floor.jpg::CompressedTexture2D::4230944635930862947::1701876675::1701876675::1::::<><>::
 TexturesCom_OfficeCeiling_1K_albedo.png::CompressedTexture2D::3660693231239014152::1701876675::1701876675::1::::<><>::
 the_backrooms_wallpaper_texture.glb::PackedScene::1219191713671521033::1701876675::1701876675::1::::<><>::
@@ -150,13 +162,13 @@ dun_cell2.tscn::PackedScene::1689443192287479691::1701876675::0::1::::<><>::res:
 dun_cell.tscn::PackedScene::2686959895746768544::1701876675::0::1::::<><>::uid://pypg3e77tne3
 floor.tres::StandardMaterial3D::7627527612933775634::1701876675::0::1::::<><>::uid://pypg3e77tne3
 walls.tres::StandardMaterial3D::5664459437673738737::1701876675::0::1::::<><>::uid://huc052xwvnuq
-::res://BackRooms/DunCell/imports/Walls/::1701957813
-BackRoomsWall.tres::StandardMaterial3D::5919921622079276394::1701957813::0::1::::<><>::uid://duy8kx8phhpyw::::res://BackRooms/the_backrooms_wallpaper_texture_0.png
+::res://BackRooms/DunCell/imports/Walls/::1701972791
+BackRoomsWall.tres::StandardMaterial3D::5919921622079276394::1701972791::0::1::::<><>::uid://duy8kx8phhpyw::::res://BackRooms/the_backrooms_wallpaper_texture_0.png
 wall_down.tscn::PackedScene::5514543662473190511::1701876675::0::1::::<><>::uid://huc052xwvnuq
 wall_left.tscn::PackedScene::8586083486090665755::1701876675::0::1::::<><>::uid://huc052xwvnuq
 wall_right.tscn::PackedScene::1701652071644766137::1701876675::0::1::::<><>::uid://huc052xwvnuq
 wall_up.tscn::PackedScene::5679427969937147991::1701876675::0::1::::<><>::uid://hklcu7wyorfv
-::res://inventory/::1701957813
+::res://inventory/::1701972791
 inventory.gd::GDScript::-1::1701876676::0::1::::<>PanelContainer<>::
 inventory.tscn::PackedScene::9037827212354194585::1701876676::0::1::::<><>::res://inventory/inventory.gd
 inventory_data.gd::GDScript::-1::1701876676::0::1::::InventoryData<>Resource<>::
@@ -165,7 +177,7 @@ pick_up.gd::GDScript::-1::1701876676::0::1::::<>Node2D<>::
 slot.gd::GDScript::-1::1701876676::0::1::::<>PanelContainer<>::
 slot.tscn::PackedScene::4673381323717969213::1701876676::0::1::::<><>::res://inventory/slot.gd
 slot_data.gd::GDScript::-1::1701876676::0::1::::SlotData<>Resource<>::
-TestInv.tres::Resource/InventoryData::780850767632417797::1701957813::0::1::::<><>::res://inventory/inventory_data.gd
+TestInv.tres::Resource/InventoryData::780850767632417797::1701972791::0::1::::<><>::res://inventory/inventory_data.gd
 ::res://inventory/item/::1701876676
 ItemManager.gd::GDScript::-1::1701876676::0::1::::<>Node<>::
 item_data.gd::GDScript::-1::1701876676::0::1::::ItemData<>Resource<>::
@@ -181,29 +193,32 @@ pick_up.tscn::PackedScene::8117613346450340542::1701876676::0::1::::<><>::res://
 pick_up_note2.gd::GDScript::-1::1701876676::0::1::::<>RigidBody3D<>::
 pick_up_note.tscn::PackedScene::5630158636838955504::1701876676::0::1::::<><>::res://inventory/item/pick_up.gd<>uid://bbc7rnjg575xh
 sketchfab_model.tscn::PackedScene::4986904143208756878::1701876676::0::1::::<><>::uid://055rkpuhdp48
-::res://Menus/::1701959838
+::res://Menus/::1701975193
 3D_Button.gd::GDScript::-1::1701876675::0::1::::<>Area3D<>::
-Death_Menu.tscn::PackedScene::4950784356812264890::1701959836::0::1::::<><>::uid://lmw52mv7ckvj::::res://assets/Menu_Assets/Black.png<>res://Menus/Scene_Change.gd
-Ending_1.tscn::PackedScene::4432877031798063317::1701959837::0::1::::<><>::uid://lmw52mv7ckvj::::res://assets/Menu_Assets/Black.png<>res://Menus/Scene_Change.gd
-Ending_2.tscn::PackedScene::1678229892988677294::1701959836::0::1::::<><>::uid://lmw52mv7ckvj::::res://assets/Menu_Assets/Black.png<>res://Menus/Scene_Change.gd
-Ending_3.tscn::PackedScene::648116425145362652::1701959837::0::1::::<><>::uid://lmw52mv7ckvj::::res://assets/Menu_Assets/Black.png<>res://Menus/Scene_Change.gd
-Ending_4.tscn::PackedScene::8583398478316283759::1701959837::0::1::::<><>::uid://lmw52mv7ckvj::::res://assets/Menu_Assets/Black.png<>res://Menus/Scene_Change.gd
-Ending_5.tscn::PackedScene::8867722853535395594::1701959838::0::1::::<><>::uid://lmw52mv7ckvj::::res://assets/Menu_Assets/Black.png<>res://Menus/Scene_Change.gd
-Ending_C.tscn::PackedScene::4385819907907968300::1701959838::0::1::::<><>::uid://lmw52mv7ckvj::::res://assets/Menu_Assets/Black.png<>res://Menus/Scene_Change.gd
+Death_Menu.tscn::PackedScene::4950784356812264890::1701975191::0::1::::<><>::uid://lmw52mv7ckvj::::res://assets/Menu_Assets/Black.png<>res://Menus/Scene_Change.gd
+Ending_1.tscn::PackedScene::4432877031798063317::1701959837::0::1::::<><>::uid://lmw52mv7ckvj
+Ending_2.tscn::PackedScene::1678229892988677294::1701959836::0::1::::<><>::uid://lmw52mv7ckvj
+Ending_3.tscn::PackedScene::648116425145362652::1701959837::0::1::::<><>::uid://lmw52mv7ckvj
+Ending_4.tscn::PackedScene::8583398478316283759::1701959837::0::1::::<><>::uid://lmw52mv7ckvj
+Ending_5.tscn::PackedScene::8867722853535395594::1701975193::0::1::::<><>::uid://lmw52mv7ckvj::::res://assets/Menu_Assets/Black.png<>res://Menus/Scene_Change.gd
+Ending_C.tscn::PackedScene::4385819907907968300::1701959838::0::1::::<><>::uid://lmw52mv7ckvj
 Scene_Change.gd::GDScript::-1::1701876675::0::1::::<>Button<>::
-Start_Menu.tscn::PackedScene::6025580507653921012::1701959836::0::1::::<><>::uid://qo57jko6gtn5::::res://3D models/MainRoom/room_prototype_v_2.tscn<>uid://b7e2qyits6cm7::::res://3D models/keypad/Keypa.tscn<>uid://k8ci5dixb7cv::::res://3D models/Monster/monster_1.tscn<>res://Menus/3D_Button.gd<>uid://c7816qpdixrh0::::res://assets/Menu_Assets/Start_Button_0.png<>uid://dqxr6m6hhlyob::::res://assets/Menu_Assets/Start_Button_1.png
-::res://Monster/::1701876675
-monster_idle.tscn::PackedScene::5344361214563429240::1701876675::0::1::::<><>::
+Start_Menu.tscn::PackedScene::6025580507653921012::1701975191::0::1::::<><>::uid://qo57jko6gtn5::::res://3D models/MainRoom/room_prototype_v_2.tscn<>uid://b7e2qyits6cm7::::res://3D models/keypad/Keypa.tscn<>uid://k8ci5dixb7cv::::res://3D models/Monster/monster_1.tscn<>res://Menus/3D_Button.gd<>uid://c7816qpdixrh0::::res://assets/Menu_Assets/Start_Button_0.png<>uid://dqxr6m6hhlyob::::res://assets/Menu_Assets/Start_Button_1.png
+::res://Monster/::1701979136
+monster_animations.gd::GDScript::-1::1701979136::0::1::::<>Node3D<>::
+monster_animations.tscn::PackedScene::3134081620435701094::1701971384::0::1::::<><>::res://Monster/AnimationPlayer.gd
+monster_idle.tscn::PackedScene::5344361214563429240::1701975193::0::1::::<><>::
 Monster_Rig.gd::GDScript::-1::1701876675::0::1::::<>Node3D<>::
 Monster_Rig.tscn::PackedScene::5496972534195877514::1701876675::0::1::::<><>::res://Monster/Monster_Rig.gd<>res://Monster/Rig.gd<>uid://k8ci5dixb7cv
-monster_walk.tscn::PackedScene::3134081620435701094::1701876675::0::1::::<><>::
+monster_walk.tscn::PackedScene::3134081620435701094::1701975194::0::1::::<><>::
 Rig.gd::GDScript::-1::1701876675::0::1::::<>MeshInstance3D<>::
-::res://Music/::1701876676
+::res://Music/::1701975173
 5-Dark Fantasy Studio- Ashes (seamless).wav::AudioStreamWAV::3060239336718216344::1701876676::1701876676::1::::<><>::
+7-Dark Fantasy Studio- The forest (seamless).mp3::AudioStreamMP3::5072620910897365608::1701974720::1701975173::1::::<><>::
 awdadwawd.mp3::AudioStreamMP3::3720135056594035022::1701876676::1701876676::1::::<><>::
-::res://TicTacToe/::1701959836
-Lava_Texture.tres::NoiseTexture2D::3916653462852516529::1701957813::0::1::::<><>::
+::res://TicTacToe/::1701972791
+Lava_Texture.tres::NoiseTexture2D::3916653462852516529::1701972791::0::1::::<><>::
 TTT.gd::GDScript::-1::1701876676::0::1::::<>Node3D<>::
-TTTTest.tscn::PackedScene::1419473905434618819::1701959836::0::1::::<><>::uid://dgpjxoygnvyy4::::res://assets/simple_fpsplayer/Player.tscn<>res://MainScene.gd<>res://TicTacToe/TTT.gd<>uid://bnv82oo1mqpgb::::res://TicTacToe/TTT_Button.tscn<>res://inventory/Inventory_Interface.gd<>uid://d108xt76uvefx::::res://inventory/inventory.tscn<>uid://b7t254g1xu2ab::::res://inventory/slot.tscn<>uid://c220l0xmp61r4::::res://3D models/Marker/marker_pickup.tscn
+TTTTest.tscn::PackedScene::1419473905434618819::1701959836::0::1::::<><>::uid://dgpjxoygnvyy4
 TTT_Button.gd::GDScript::-1::1701876676::0::1::::<>Node3D<>::
 TTT_Button.tscn::PackedScene::3344280219171670153::1701876676::0::1::::<><>::res://TicTacToe/TTT_Button.gd<>uid://bmfss748py8tf

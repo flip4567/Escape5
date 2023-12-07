@@ -1,3 +1,4 @@
+AudioStreamPlayer3D
 CollisionShape3D
 Area3D
 Marker3D
@@ -21,7 +22,6 @@ FogVolume
 Camera3D
 TextEdit
 Control
-AudioStreamPlayer3D
 GridMap
 Timer
 Label

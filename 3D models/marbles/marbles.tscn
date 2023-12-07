@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3jeanbefmj8k"]
+
+[ext_resource type="PackedScene" uid="uid://bs53umyd3kxfk" path="res://3D models/marbles/marbles.glb" id="1_gl0e8"]
+
+[node name="marbles" instance=ExtResource("1_gl0e8")]
+transform = Transform3D(400, 0, 0, 0, 400, 0, 0, 0, 400, 0, 0, 0)
