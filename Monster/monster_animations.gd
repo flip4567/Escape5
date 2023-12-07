@@ -18,11 +18,14 @@ func _process(delta):
 	match state:
 		monster_state.Idle:
 			pass
+			$AnimationPlayer.play("Idle")
 		monster_state.Direction:
 			direction = choose([Vector3.RIGHT, Vector3.LEFT, Vector3.FORWARD]) 
 			state = choose([monster_state.Move, monster_state.Idle])
+			
 		monster_state.Move:
 			move(delta)
+			$AnimationPlayer.play("Walk")
 			
 func move(delta):
 	position += direction * SPEED * delta
