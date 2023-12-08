@@ -328,7 +328,6 @@ autostart = true
 
 [node name="marker_pickup" parent="." groups=["Marker"] instance=ExtResource("3_lbqsw")]
 transform = Transform3D(0.245, 0, 0, 0, 0.245, 0, 0, 0, 0.245, 4.29131, 1.88338, -4.69453)
-visible = false
 
 [node name="Monster1" parent="." instance=ExtResource("17_4h4bk")]
 transform = Transform3D(0.0133152, 0, -0.294699, 0, 0.295, 0, 0.294699, 0, 0.0133152, -48.594, 0.129986, -7.10317)
