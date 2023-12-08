@@ -1,4 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://bkwf4psy3703k"]
+[gd_scene load_steps=9 format=3 uid="uid://bkwf4psy3703k"]
+
+[ext_resource type="Script" path="res://Monster/monster_animations.gd" id="1_u1546"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ye0fj"]
 resource_name = "Material"
@@ -256,6 +258,7 @@ _data = {
 }
 
 [node name="monster_walk" type="Node3D"]
+script = ExtResource("1_u1546")
 
 [node name="metarig" type="Node3D" parent="."]
 transform = Transform3D(6.52408, 0, 0, 0, 6.52408, 0, 0, 0, 6.52408, 0, 0, 0)

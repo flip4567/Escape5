@@ -4,6 +4,7 @@ var player
 var cam
 var Key = preload("res://3D models/key/key.tscn")
 var Marker = preload("res://3D models/Marker/Marker_Equip.tscn")
+var Stick = preload("res://3D models/marbles/stick.tscn")
 
 func use_slot_data(slot_data: SlotData):
 	var item_data = slot_data.item_data
@@ -19,3 +20,8 @@ func use_slot_data(slot_data: SlotData):
 		Marker_Equip.position = Vector3(-0.061,-0.5,-0.393)
 		Marker_Equip.rotation = Vector3(-15, 59.6,-85)
 		
+	if item_data.name == "Stick":
+		var Stick_equip = Stick.instantiate()
+		cam.add_child(Stick_equip)
+		Stick_equip.position = Vector3(0,-0.7,-0.244)
+		Stick_equip.rotation = Vector3(-20, 20,-20 )

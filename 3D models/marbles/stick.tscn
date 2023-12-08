@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch8rv58jsgdmd"]
+
+[ext_resource type="PackedScene" uid="uid://coxaxsrb0d33t" path="res://3D models/marbles/stick.glb" id="1_ndl6p"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ipa7r"]
+height = 3.43512
+
+[node name="stick" instance=ExtResource("1_ndl6p")]
+transform = Transform3D(0.28, 0, 0, 0, 0.28, 0, 0, 0, 0.28, 0, 0, 0)
+
+[node name="Object_2" parent="Sketchfab_model/61df88d8978a41a59b7ce7b3c717da20_obj_cleaner_materialmerger_gles" index="0"]
+transform = Transform3D(0.33, 0, 0, 0, 0.33, 0, 0, 0, 0.33, 0, 0, 0)
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+collision_layer = 65536
+collision_mask = 65536
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.9203, 0)
+shape = SubResource("CapsuleShape3D_ipa7r")

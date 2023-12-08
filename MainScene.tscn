@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bl6cyvuysewfo"]
+[gd_scene load_steps=66 format=3 uid="uid://bl6cyvuysewfo"]
 
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="1_8etef"]
 [ext_resource type="Script" path="res://MainScene.gd" id="1_b25ig"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://d108xt76uvefx" path="res://inventory/inventory.tscn" id="5_gwghl"]
 [ext_resource type="Script" path="res://inventory/Inventory_Interface.gd" id="6_b0e5n"]
 [ext_resource type="PackedScene" uid="uid://b7t254g1xu2ab" path="res://inventory/slot.tscn" id="8_qixa7"]
-[ext_resource type="Script" path="res://Monster/monster_animations.gd" id="10_xkpr5"]
 [ext_resource type="Script" path="res://Time_Control.gd" id="11_utoby"]
 [ext_resource type="PackedScene" uid="uid://df7p0utdbxi0c" path="res://3D models/MainRoom/room_prototype_v_3.tscn" id="16_12ano"]
 [ext_resource type="PackedScene" uid="uid://k8ci5dixb7cv" path="res://3D models/Monster/monster_1.tscn" id="17_4h4bk"]
@@ -18,7 +17,19 @@
 [ext_resource type="PackedScene" uid="uid://bsys3d3ay5d5b" path="res://3D models/key/key.tscn" id="21_oo0gp"]
 [ext_resource type="Script" path="res://3D models/key/Tele.gd" id="22_svss1"]
 [ext_resource type="PackedScene" uid="uid://3aw5ksbr60d0" path="res://3D models/Light/exit light/low_poly_exit_light_ceiling_sign_light.tscn" id="23_02nor"]
+[ext_resource type="Script" path="res://DoorOpen.gd" id="23_13g8j"]
 [ext_resource type="AudioStream" uid="uid://cejhlca61f7fw" path="res://Music/7-Dark Fantasy Studio- The forest (seamless).mp3" id="24_rap4u"]
+[ext_resource type="PackedScene" uid="uid://quswq4jdj1qe" path="res://shelf.tscn" id="25_w1tvo"]
+[ext_resource type="PackedScene" uid="uid://i136b7jnbrhe" path="res://3D models/marbles/glass_jar.tscn" id="26_1qsue"]
+[ext_resource type="Script" path="res://3D models/marbles/glass_jar.gd" id="26_m8csj"]
+[ext_resource type="PackedScene" uid="uid://dvcrluf10yocq" path="res://3D models/marbles/stickPickup.tscn" id="26_mc3v5"]
+[ext_resource type="Script" path="res://3D models/marbles/pick_up_stick.gd" id="27_yywcl"]
+[ext_resource type="Script" path="res://inventory/item/item_data.gd" id="28_cmejv"]
+[ext_resource type="Texture2D" uid="uid://dvme0oq2pa673" path="res://3D models/marbles/pngtree-wooden-stick-png-image_5614245.png" id="29_8ve07"]
+[ext_resource type="Script" path="res://inventory/slot_data.gd" id="30_bwiu3"]
+[ext_resource type="PackedScene" uid="uid://cfdwjqnf3or0h" path="res://inventory/item/Note1.tscn" id="33_lapd6"]
+[ext_resource type="Resource" uid="uid://b00pi0hyf1bje" path="res://3D models/Note/Note3.tres" id="34_0pmkk"]
+[ext_resource type="Script" path="res://inventory/item/pick_up_note3.gd" id="34_aycgb"]
 [ext_resource type="Script" path="res://TicTacToe/TTT.gd" id="38_13e4o"]
 [ext_resource type="PackedScene" uid="uid://bnv82oo1mqpgb" path="res://TicTacToe/TTT_Button.tscn" id="39_gy1v5"]
 [ext_resource type="Texture2D" uid="uid://bv2iyfd0nvvs8" path="res://TicTacToe/Lava_Texture.tres" id="40_gk40v"]
@@ -26,6 +37,7 @@
 [ext_resource type="Material" uid="uid://dogt7gmvynypt" path="res://BackRooms/DunCell/imports/ceiling.tres" id="42_umw8w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uqkc3"]
+size = Vector3(1, 2.38874, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_nxoa8"]
 font_size = 46
@@ -71,18 +83,195 @@ albedo_color = Color(0.164706, 0.164706, 0.164706, 1)
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_krosa"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dxd5c"]
+albedo_color = Color(0.772549, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wwvh8"]
+material = SubResource("StandardMaterial3D_dxd5c")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nv5ic"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m38ef"]
+size = Vector3(3.18802, 3.34554, 3.17267)
+
+[sub_resource type="Animation" id="Animation_p228w"]
+resource_name = "falling"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 1.58095)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(6.03716, 4.6142, -26.6084), Vector3(4.01751, 0.515645, -26.6084)]
+}
+
+[sub_resource type="Animation" id="Animation_xctvd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(6.03716, 4.6142, -26.6084)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2fx3k"]
+_data = {
+"RESET": SubResource("Animation_xctvd"),
+"falling": SubResource("Animation_p228w")
+}
+
+[sub_resource type="Resource" id="Resource_xai2r"]
+script = ExtResource("28_cmejv")
+name = "Stick"
+description = "If you played escape E... you would know what this is"
+texture = ExtResource("29_8ve07")
+
+[sub_resource type="Resource" id="Resource_0aj4c"]
+script = ExtResource("30_bwiu3")
+item_data = SubResource("Resource_xai2r")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sygxj"]
+radius = 2.42944
+height = 42.2663
+
+[sub_resource type="Animation" id="Animation_qdbie"]
+resource_name = "DoorDeath"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, -0.948674, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.85185, 0, -28.3401), Vector3(-0.907231, 0, -26.2609)]
+}
+
+[sub_resource type="Animation" id="Animation_dqg8k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.85185, 0, -28.3401)]
+}
+
+[sub_resource type="Animation" id="Animation_bjlfe"]
+resource_name = "DoorWin"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.85185, 0, -28.3401), Vector3(1.85185, 0, -24.6724)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(-1.41016, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xtvwv"]
+_data = {
+"DoorDeath": SubResource("Animation_qdbie"),
+"DoorWin": SubResource("Animation_bjlfe"),
+"RESET": SubResource("Animation_dqg8k")
+}
+
+[sub_resource type="Resource" id="Resource_ogte3"]
+script = ExtResource("30_bwiu3")
+item_data = ExtResource("34_0pmkk")
+
 [node name="MainScene" type="Node3D"]
 script = ExtResource("1_b25ig")
 
 [node name="Player" parent="." instance=ExtResource("1_8etef")]
-transform = Transform3D(-0.621729, 0, 0.00879575, 0, 0.895269, 0, -0.00645665, 0, -0.846965, 9.7765, 1.45322, 5.66593)
+transform = Transform3D(0.620112, 0, 0.0616798, 0, 0.895269, 0, -0.0452771, 0, 0.844762, 9.7765, 1.45322, -19.3139)
 collision_layer = 18
 collision_mask = 17
 
 [node name="Area3D" type="Area3D" parent="Player"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player/Area3D"]
-transform = Transform3D(1, 0, -1.86265e-09, 0, 0.64604, 0, 7.45058e-09, 0, 0.999999, 0, -0.534088, 0)
+transform = Transform3D(1, 0, 0, 0, 0.64604, 0, 1.86265e-08, 0, 0.999999, 0, 0.0166738, 0)
 shape = SubResource("BoxShape3D_uqkc3")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -143,7 +332,7 @@ visible = false
 
 [node name="Monster1" parent="." instance=ExtResource("17_4h4bk")]
 transform = Transform3D(0.0133152, 0, -0.294699, 0, 0.295, 0, 0.294699, 0, 0.0133152, -48.594, 0.129986, -7.10317)
-script = ExtResource("10_xkpr5")
+script = null
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_phjx8")
@@ -387,24 +576,105 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_krosa")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.2762, 8.74228e-08, 0, 1.6341e-14, 4.37114e-08, 3.46226, 3.73838e-07, 1, -1.5134e-07, 1.57311, 2.93639, -27.5145)
-material_override = SubResource("StandardMaterial3D_2yeys")
-mesh = SubResource("PlaneMesh_6alx3")
-skeleton = NodePath("../..")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_krosa")
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.78079, 5.27097, -3.56553)
 stream = ExtResource("24_rap4u")
 autoplay = true
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.06905, 6.20271e-08, -3.11136e-21, 4.08525e-15, 3.10132e-08, 0.865565, 9.34597e-08, 0.709498, -3.7835e-08, -2.64926, 1.44412, -27.0409)
+mesh = SubResource("BoxMesh_wwvh8")
+skeleton = NodePath("MeshInstance3D2")
+script = ExtResource("23_13g8j")
+
+[node name="Area3D" type="Area3D" parent="MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/Area3D"]
+transform = Transform3D(1, -5.32907e-15, 4.23516e-22, 0, 1, -2.84217e-14, 1.27055e-21, 0, 1, 0, -0.0467834, 0)
+shape = SubResource("BoxShape3D_nv5ic")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D3"]
+transform = Transform3D(4, 1.01608e-12, -1.10114e-20, -9.09495e-13, 1.40945, 2.84217e-14, 1.69407e-20, -3.55271e-15, 4, -3.94965, -0.667511, 1.72405)
+material_override = SubResource("StandardMaterial3D_2yeys")
+mesh = SubResource("PlaneMesh_6alx3")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D3/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_krosa")
+
+[node name="shelf" parent="." instance=ExtResource("25_w1tvo")]
+transform = Transform3D(1, 0, 0, 0, 1.50841, 0, 0, 0, 1, 4.01295, -0.138055, -28.2202)
+
+[node name="glass_jar" parent="." instance=ExtResource("26_1qsue")]
+transform = Transform3D(0.275, 0, 0, 0, 0.275, 0, 0, 0, 0.275, 6.03716, 4.6142, -26.6084)
+script = ExtResource("26_m8csj")
+
+[node name="Area3D" type="Area3D" parent="glass_jar"]
+collision_layer = 65536
+collision_mask = 65536
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="glass_jar/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.608202, 0)
+shape = SubResource("BoxShape3D_m38ef")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="glass_jar"]
+libraries = {
+"": SubResource("AnimationLibrary_2fx3k")
+}
+
+[node name="stickPickup" parent="." instance=ExtResource("26_mc3v5")]
+transform = Transform3D(0.0578015, 0, 0, 0, 0.115384, 0, 0, 0, 0.0578015, 10.179, 0.0844142, -26.7564)
+script = ExtResource("27_yywcl")
+slot_data = SubResource("Resource_0aj4c")
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="stickPickup" groups=["Stick"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="stickPickup/RigidBody3D2"]
+transform = Transform3D(0.145, 0, 0, 0, 0.145, 0, 0, 0, 0.145, 0, 21.2103, 0)
+shape = SubResource("CapsuleShape3D_sygxj")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Marker3D2" type="Marker3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5532, 0.635245, -24.6441)
+
+[node name="Marker3D3" type="Marker3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.50076, 0.635245, -24.6441)
+
+[node name="Marker3D4" type="Marker3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.50076, 0.635245, -23.2279)
+
+[node name="Marker3D5" type="Marker3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.91134, 0.635245, -23.2279)
+
+[node name="Marker3D6" type="Marker3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25764, 0.635245, -22.1857)
+
+[node name="Marker3D7" type="Marker3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04452, 0.635245, -24.4965)
+
+[node name="Marker3D8" type="Marker3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04452, 0.635245, -22.8798)
+
+[node name="Monster3" parent="." instance=ExtResource("20_l40lf")]
+transform = Transform3D(0.275, 0, 0, 0, 0.275, 0, 0, 0, 0.275, 1.85185, 0, -28.3401)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Monster3"]
+libraries = {
+"": SubResource("AnimationLibrary_xtvwv")
+}
+
+[node name="Note3" parent="." groups=["Note3"] instance=ExtResource("33_lapd6")]
+transform = Transform3D(0.0227223, 0, -0.999742, 0, 1, 0, 0.999742, 0, 0.0227223, -2.75732, 0.185719, -25.9265)
+script = ExtResource("34_aycgb")
+slot_data = SubResource("Resource_ogte3")
 
 [connection signal="timeout" from="UI/Time_Control/Timer" to="UI/Time_Control" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Lava/Area3D" to="Lava/Area3D" method="_on_body_entered"]
 [connection signal="body_entered" from="Parkour/Win" to="Parkour/Win" method="_on_body_entered"]
 [connection signal="area_entered" from="Backrooms/Area3D" to="Backrooms/Area3D" method="_on_area_entered"]
 [connection signal="area_entered" from="key/Area3D2" to="key" method="_on_area_3d_2_area_entered"]
+[connection signal="area_entered" from="MeshInstance3D3/Area3D" to="MeshInstance3D3" method="_on_area_3d_area_entered"]
+[connection signal="area_entered" from="glass_jar/Area3D" to="glass_jar" method="_on_area_3d_area_entered"]

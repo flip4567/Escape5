@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b00pi0hyf1bje"]
+
+[ext_resource type="Script" path="res://inventory/item/item_data.gd" id="1_ublvm"]
+[ext_resource type="Texture2D" uid="uid://cnyk0dyy4dpq7" path="res://3D models/Note/Note1.png" id="2_wmggf"]
+
+[resource]
+script = ExtResource("1_ublvm")
+name = "Note 3"
+description = "if you played escape 1 you know what this 
+button does
+If not its 𝐞⃥⃒̸ᴉ⃥⃒̸𝐩⃥⃒̸ 𝐥⃥⃒̸𝐥⃥⃒̸ᴉ⃥⃒̸ʍ⃥⃒̸"
+texture = ExtResource("2_wmggf")
